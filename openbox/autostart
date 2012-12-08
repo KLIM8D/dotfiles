@@ -1,0 +1,21 @@
+# This shell script is run before Openbox launches.
+# Environment variables set here are passed to the Openbox session.
+
+# Set a background
+
+# D-bus
+
+#Start applications
+#numlockx on &
+#pypanel &
+tint2 &
+#sh /home/klim/.config/feh/themes/.fehbg &
+sh /home/klim/Scripts/wallpaper &
+conky -c ~/.conkyrc &
+conky -c ~/.conkyrc2 &
+# Make GTK apps look and behave how they were set up in the gnome config tools
+#gnome-settings-daemon &
+
+# Run XDG autostart things.  By default don't run anything desktop-specific
+# See xdg-autostart --help more info
+DESKTOP_ENV="OPENBOX"

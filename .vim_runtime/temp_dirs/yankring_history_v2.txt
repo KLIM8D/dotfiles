@@ -1,0 +1,44 @@
+(F) Fix page order (ikke implenmenteret endnu) +pirken @frontend @backen,V
+(B) Få stabilt OC +diverse,V
+(F) Fix så man ikke kan skjule indstillinger fra admin menuen +pirken @backend,V
+(A) Færdig gør og lav frontend side til nyheder evt. med sort +pirken @backend,V
+(F) Oversæt backend til dansk +pirken @backend,V
+(A) Gør sådan at dynamic content sider har unikt url +pirken @backend,V
+(B) Nyhedsbrev fix, evt. med template @backend +pirken,V
+686868,v
+/w,v
+git@github.com:KLIM8D/ucn-2semproject-dm79-group2.git,v
+ public static int selectDropdownIndex(JComboBox<String> dropdown, String findValue)    {        int drpIndex = 0;        for (int i=0; i< dropdown.getItemCount(); i++)        {            String currentValue = dropdown.getItemAt(i);            if(findValue.equalsIgnoreCase(currentValue))            {                drpIndex = i;                break;            }        }        return drpIndex;    },v
+public static Date addDays(Date date, int days)    {        Calendar cal = Calendar.getInstance();        cal.setTime(date);        cal.add(Calendar.DATE, days); //minus number would decrement the days        return cal.getTime();    },v
+###sql:    Contains the SQL files for creation of the database, tables and relations###uml:    Contains UML diagrams for this project,v
+Nipsey Hussle,v
+Chris hvis du keder dig nu du ikke kan spille starcraft kan du ,v
+  "686868,V
+Buffer. (eg. ':b 1' g,v
+http://www.streetammo.dk/commodity/46924-carhartt-vicious-pant,v
+Så han kan nærmest have fradrag ,v
+img_2000123,v
+#f5cd4c,v
+    set guioptions+=r,V
+exe 'hi LineNr       guifg='.s:border1_fg .' guibg='.s:border1_bg .' gui=none ',v
+https://raw.github.com/davidhalter/jedi/master/screenshot_function.png,V
+https://raw.github.com/davidhalter/jedi/master/screenshot_function.png,v
+highlight LineNr guifg=#050505,v
+https://github.com/davidhalter/jedi-vim,v
+git@github.com:davidhalter/jedi-vim.git,v
+git@github.com:ervandew/supertab.git,v
+" set guioptions=-T,V
+" Remove menus etc. from gVimset guioptions-=m" set guioptions=-Tset guioptions+=r,v
+set guioptions-=m" set guioptions=-Tset guioptions+=r,v
+			        " use vim defaults,v
+" window position,V
+" window width,V
+run the Flake8 check every time you write a Python file,v
+autocmd BufWritePost *.py call Flake8(),v
+"map F2 to open previous buffer,V
+"map F2 to open previous buffer,v
+set guioptions=-mset guioptions=-Tset guioptions=-rset stal=2,v
+"KEYBINDSmap <F2> :previous<CR>                  " map F2 to open previous buffermap <F3> :next<CR>                      " map F3 to open next buffermap <F4> :NERDTreeToggle<CR>            " map F4 to open NERDTreenmap <C-d> :q!<CR>                      " map CTRL + d to quitimap <C-d> <ESC><C-d>                   " map CTRL + d to quit (INSERT MODE)nmap <C-s> :w<CR>                       " map CTRL + s to saveimap <C-s> <ESC><C-s>i			        " map CTRL + s to save (INSERT MODE)map <C-t> :tabnew<CR>                   " map CTRL + t new tabmap <C-n> :vnew<CR>                     " map CTRL + n new verticalmap <C-e> :Explore<CR>                  " map CTRL + e open Exploremap <silent><A-Right> :tabnext<CR>      " map Alt-RightArrow to jump to the next tabmap <silent><A-Left> :tabprevious<CR>   " map Alt-LeftArrow to jump to the previous tabnmap <C-V> "+gP				            " Pasteimap <C-V> <ESC><C-V>i			        " Paste (INSERT MODE)vmap <C-C> "+y				            " Copyimap jj <ESC>                           " Escape insert modenmap <C-z> :u<CR>                       " map CTRL + z to undo changesimap <C-z> <ESC><C-z>i                  " map CTRL + z to undo changes (INSERT MODE)nmap <C-y> :redo<CR>                    " map CTRL + y to redo changesimap <C-y> <ESC><C-y>i                  " map CTRL + y to redo changes (INSERT MODE)set guioptions=-mset guioptions=-Tset guioptions=-rset stal=2,v
+set nowrap				            " stop lines from wrappingset lines=75				        " window heightset columns=130				        " window widthwinpos 75 50				        " window position,v
+set nocompatible			        " use vim defaultsset number				            " show line numbers,v
+git@github.com:amix/vimrc.git,v

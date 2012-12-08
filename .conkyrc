@@ -1,0 +1,41 @@
+# 
+# ~/.conkyrc-clock - an attractive, Elegant Brit-style desktop clock
+# 
+text_buffer_size 10000
+alignment       top_right
+color0          e1e1e1
+color1          e04613
+default_color   ffffff
+double_buffer   yes
+draw_shades     no
+font            DejaVu Serif-36
+gap_x           10
+gap_y           20
+minimum_size    225
+own_window      yes
+own_window_class Conky
+own_window_transparent true
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_type normal
+own_window_colour 111111
+update_interval 1
+use_xft         yes
+
+TEXT
+$alignr${time %H:%M}$color0${time %P}${font DejaVu Serif-12}
+$color1${hr 3}$color
+$alignr${time %A | %-d %B}
+
+${voffset 0}${color3}${font GE Inspira:bold:size=9}Core 1${color3}${alignr}${cpu cpu1}%
+${voffset 1}${color3}${font GE Inspira:bold:size=9}Core 2${color3}${alignr}${cpu cpu2}%
+${voffset 1}${color3}${font GE Inspira:bold:size=9}RAM${color3}${alignr}${mem}
+${voffset 1}${color3}${font GE Inspira:bold:size=9}Uptime ${color3}${alignr}$uptime_short
+${voffset 1}${color3}${font GE Inspira:bold:size=9}Battery ${color3}${alignr}${battery_percent}%
+#${voffset 1}${color3}${font GE Inspira:bold:size=9}Battery time left ${color3}${alignr}${battery_time}
+
+${font Arial:bold:size=10}${color ffffff}TOP PROCESSES $color1${hr 3}$color
+${voffset 0}${color3}${font GE Inspira:bold:size=9}${top_mem name 2}${alignr}${top mem 2} %
+${voffset 0}${color3}${font GE Inspira:bold:size=9}${top_mem name 3}${alignr}${top mem 3} %
+${voffset 0}${color3}${font GE Inspira:bold:size=9}${top_mem name 4}${alignr}${top mem 4} %
+${voffset 0}${color3}${font GE Inspira:bold:size=9}${top_mem name 5}${alignr}${top mem 5} %
+${voffset 0}${color3}${font GE Inspira:bold:size=9}${top_mem name 6}${alignr}${top mem 6} %

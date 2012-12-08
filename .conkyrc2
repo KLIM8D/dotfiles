@@ -1,0 +1,27 @@
+# 
+# ~/.conkyrc-clock - an attractive, Elegant Brit-style desktop clock
+# 
+text_buffer_size 10000
+alignment       top_left
+color0          e1e1e1
+color1          e04613
+default_color   ffffff
+double_buffer   yes
+draw_shades     no
+font            DejaVu Serif-36
+gap_x           20
+gap_y           400
+minimum_size    225
+own_window      yes
+own_window_class Conky
+own_window_transparent true
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+own_window_type normal
+own_window_colour 111111
+update_interval 1
+use_xft         yes
+
+
+TEXT
+${font Arial:bold:size=10}${color ffffff}TODO LIST $color1${hr 3}$color
+${execpi 120 todo.sh -d ~/Scripts/todo-conky.cfg pv}
