@@ -1,0 +1,113 @@
+2012-12-07 01:00:23,099 [      1]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE STARTED ------------------------------------------------------ 
+2012-12-07 01:00:23,127 [     29]   INFO -        #com.intellij.idea.Main - IDE: IntelliJ IDEA (build #IC-123.72, 05 Dec 2012 00:00) 
+2012-12-07 01:00:23,127 [     29]   INFO -        #com.intellij.idea.Main - JRE: 1.7.0_09-b05 (Oracle Corporation) 
+2012-12-07 01:00:23,127 [     29]   INFO -        #com.intellij.idea.Main - JVM: 23.5-b02 (Oracle Corporation) 
+2012-12-07 01:00:23,128 [     30]   INFO -        #com.intellij.idea.Main - JNA library loaded (64-bit) in 0 ms 
+2012-12-07 01:00:23,205 [    107]   INFO -        #com.intellij.idea.Main - Snappy library loaded (1.0.4) in 77 ms 
+2012-12-07 01:00:23,251 [    153]   INFO - .intellij.idea.IdeaApplication - WM detected: Openbox 
+2012-12-07 01:00:26,754 [   3656]   INFO - llij.ide.plugins.PluginManager - 29 plugins initialized in 3238 ms 
+2012-12-07 01:00:26,754 [   3656]   INFO - llij.ide.plugins.PluginManager - Loaded plugins:IDEA CORE, Eclipse Integration (3.0), JUnit (1.0), Intention Power Pack (1.0), Properties Support, I18n for Java, TestNG-J (8.0), Copyright (8.1), XPathView + XSLT Support (4), IntelliLang (8.0), Android Support (10.0), UI Designer, Git Integration (8.1), XSLT-Debugger (1.4), Task Management (1.0), UI Designer (Core), GenerateToString (5.0), GitHub, Inspection Gadgets (1.0), Android Designer, Plugin DevKit (1.0) 
+2012-12-07 01:00:26,755 [   3657]   INFO - llij.ide.plugins.PluginManager - Disabled plugins: Ant Support (1.0), Groovy (9.0), Maven Integration, hg4idea (10.0), Subversion Integration (1.1), Commander (1.0.0), Gradle, CVS Integration (11) 
+2012-12-07 01:00:28,295 [   5197]   INFO - ellij.vfs.persistent.FSRecords - Marking VFS as corrupted 
+2012-12-07 01:00:28,311 [   5213]   INFO - ellij.util.io.PagedFileStorage - lower=100; upper=200; buffer=10; mmap=true 
+2012-12-07 01:00:28,362 [   5264]   INFO - api.vfs.impl.local.FileWatcher - Starting file watcher: /usr/share/intellijidea-ce/bin/fsnotifier64 
+2012-12-07 01:00:28,380 [   5282]   INFO - api.vfs.impl.local.FileWatcher - Native file watcher is operational. 
+2012-12-07 01:00:29,463 [   6365]   INFO - .history.utils.LocalHistoryLog - local history version mismatch (was: 0, expected: 5), rebuilding... 
+2012-12-07 01:00:29,463 [   6365]   INFO - .history.utils.LocalHistoryLog - FS has been rebuild, rebuilding local history... 
+2012-12-07 01:00:29,815 [   6717]   INFO - jetbrains.ide.WebServerManager - web server started, port 63342 
+2012-12-07 01:00:31,047 [   7949]   INFO - s.impl.stores.FileBasedStorage - Document was not loaded for $APP_CONFIG$/macros.xml file is null 
+2012-12-07 01:00:31,053 [   7955]   INFO - s.impl.stores.FileBasedStorage - Document was not loaded for $APP_CONFIG$/quicklists.xml file is null 
+2012-12-07 01:00:31,177 [   8079]   INFO - tellij.xml.Html5SchemaProvider - HTML5_SCHEMA_LOCATION = /usr/share/intellijidea-ce/lib/idea.jar!/resources/html5-schema/html5.rnc 
+2012-12-07 01:00:31,178 [   8080]   INFO - tellij.xml.Html5SchemaProvider - XHTML5_SCHEMA_LOCATION = /usr/share/intellijidea-ce/lib/idea.jar!/resources/html5-schema/xhtml5.rnc 
+2012-12-07 01:00:32,232 [   9134]   INFO -                  TestNG Runner - Create TestNG Template Configuration 
+2012-12-07 01:00:32,252 [   9154]   INFO -                  TestNG Runner - Create TestNG Template Configuration 
+2012-12-07 01:00:32,453 [   9355]   INFO - ellij.project.impl.ProjectImpl - 24 project components initialized in 1218 ms 
+2012-12-07 01:00:32,454 [   9356]   INFO - le.impl.ModuleManagerComponent - 0 modules loaded in 0 ms 
+2012-12-07 01:00:32,516 [   9418]   INFO - pl.stores.ApplicationStoreImpl - 72 application components initialized in 5184 ms 
+2012-12-07 01:00:32,520 [   9422]   INFO - .intellij.idea.IdeaApplication - App initialization took 18036 ms 
+2012-12-07 01:00:32,551 [   9453]   INFO - s.impl.stores.FileBasedStorage - Document was not loaded for $APP_CONFIG$/customization.xml file is null 
+2012-12-07 01:00:35,452 [  12354]   INFO -                  TestNG Runner - Create TestNG Template Configuration 
+2012-12-07 01:00:35,461 [  12363]   INFO -                  TestNG Runner - Create TestNG Template Configuration 
+2012-12-07 01:00:36,568 [  13470]   INFO - ellij.project.impl.ProjectImpl - 121 project components initialized in 2689 ms 
+2012-12-07 01:00:36,960 [  13862]   INFO - le.impl.ModuleManagerComponent - 1 modules loaded in 392 ms 
+2012-12-07 01:00:46,463 [  23365]   INFO - .roots.impl.DirectoryIndexImpl - Directory index initialized in 8599 ms, indexed 1310 directories 
+2012-12-07 01:00:46,472 [  23374]   INFO - s.impl.stores.FileBasedStorage - Document was not loaded for $APP_CONFIG$/plainTextFiles.xml file is null 
+2012-12-07 01:00:46,494 [  23396]   INFO - pl.PushedFilePropertiesUpdater - File properties pushed in 26 ms 
+2012-12-07 01:00:47,637 [  24539]   INFO - s.impl.stores.FileBasedStorage - Document was not loaded for $PROJECT_CONFIG_DIR$/codeStyleSettings.xml file is null 
+2012-12-07 01:00:47,642 [  24544]   INFO - s.impl.stores.FileBasedStorage - Document was not loaded for $PROJECT_CONFIG_DIR$/projectCodeStyle.xml file is null 
+2012-12-07 01:00:47,729 [  24631]   INFO - s.impl.stores.FileBasedStorage - Document was not loaded for $APP_CONFIG$/code.style.schemes.xml file is null 
+2012-12-07 01:00:47,852 [  24754]   INFO - s.impl.stores.FileBasedStorage - Document was not loaded for $PROJECT_CONFIG_DIR$/fileColors.xml file is null 
+2012-12-07 01:00:49,225 [  26127]   INFO - s.impl.stores.FileBasedStorage - Document was not loaded for $PROJECT_CONFIG_DIR$/IntelliLang.xml file is null 
+2012-12-07 01:00:51,507 [  28409]   INFO - s.impl.stores.FileBasedStorage - Document was not loaded for $APP_CONFIG$/plugin_ui.xml file is null 
+2012-12-07 01:00:54,187 [  31089]   INFO - tor.impl.FileEditorManagerImpl - Project opening took 20449 ms 
+2012-12-07 01:01:01,569 [  38471]   INFO - s.impl.stores.FileBasedStorage - Document was not loaded for $APP_CONFIG$/file.template.settings.xml file is null 
+2012-12-07 01:01:20,204 [  57106]   INFO - indexing.UnindexedFilesUpdater - Indexable files iterated in 33631 ms 
+2012-12-07 01:01:20,205 [  57107]   INFO - indexing.UnindexedFilesUpdater - Unindexed files update started: 22419 files to update 
+2012-12-07 01:02:23,875 [ 120777]   INFO - indexing.UnindexedFilesUpdater - Unindexed files update done in 63668 ms 
+2012-12-07 01:02:26,391 [ 123293]   INFO - s.impl.stores.FileBasedStorage - Document was not loaded for $APP_CONFIG$/cachedDictionary.xml file is null 
+2012-12-07 01:07:55,416 [ 452318]   INFO - s.impl.stores.FileBasedStorage - Document was not loaded for $APP_CONFIG$/intentionSettings.xml file is null 
+2012-12-07 01:07:58,381 [ 455283]   INFO - s.impl.stores.FileBasedStorage - Document was not loaded for $APP_CONFIG$/template.settings.xml file is null 
+2012-12-07 01:08:51,060 [ 507962]   INFO - ins.android.sdk.AndroidSdkData - DDMLib terminated 
+2012-12-07 01:08:51,071 [ 507973]   INFO - il.indexing.FileBasedIndexImpl - START INDEX SHUTDOWN 
+2012-12-07 01:08:51,098 [ 508000]   INFO - il.indexing.FileBasedIndexImpl - END INDEX SHUTDOWN 
+2012-12-07 01:08:51,098 [ 508000]   INFO - stubs.SerializationManagerImpl - START StubSerializationManager SHUTDOWN 
+2012-12-07 01:08:51,099 [ 508001]   INFO - stubs.SerializationManagerImpl - END StubSerializationManager SHUTDOWN 
+2012-12-07 01:08:51,106 [ 508008]   INFO - jetbrains.ide.WebServerManager - web server stopped 
+2012-12-07 01:08:51,107 [ 508009]   INFO - .history.utils.LocalHistoryLog - Purging local history... 
+2012-12-07 01:08:51,108 [ 508010]   INFO - .history.utils.LocalHistoryLog - Local history storage successfully closed. 
+2012-12-07 01:08:51,116 [ 508018]   WARN - api.vfs.impl.local.FileWatcher - Watcher terminated. 
+2012-12-07 01:08:51,117 [ 508019]   INFO - newvfs.persistent.PersistentFS - VFS dispose started 
+2012-12-07 01:08:51,122 [ 508024]   INFO - newvfs.persistent.PersistentFS - VFS dispose completed 
+2012-12-07 01:08:51,140 [ 508042]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE SHUTDOWN ------------------------------------------------------ 
+2012-12-07 18:25:59,669 [      0]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE STARTED ------------------------------------------------------ 
+2012-12-07 18:25:59,687 [     18]   INFO -        #com.intellij.idea.Main - IDE: IntelliJ IDEA (build #IC-123.72, 05 Dec 2012 00:00) 
+2012-12-07 18:25:59,687 [     18]   INFO -        #com.intellij.idea.Main - JRE: 1.7.0_09-b05 (Oracle Corporation) 
+2012-12-07 18:25:59,687 [     18]   INFO -        #com.intellij.idea.Main - JVM: 23.5-b02 (Oracle Corporation) 
+2012-12-07 18:25:59,740 [     71]   INFO -        #com.intellij.idea.Main - JNA library loaded (64-bit) in 52 ms 
+2012-12-07 18:25:59,994 [    325]   INFO -        #com.intellij.idea.Main - Snappy library loaded (1.0.4) in 254 ms 
+2012-12-07 18:26:00,037 [    368]   INFO - .intellij.idea.IdeaApplication - WM detected: Openbox 
+2012-12-07 18:26:01,747 [   2078]   INFO - llij.ide.plugins.PluginManager - 29 plugins initialized in 1484 ms 
+2012-12-07 18:26:01,747 [   2078]   INFO - llij.ide.plugins.PluginManager - Loaded plugins:IDEA CORE, Eclipse Integration (3.0), Intention Power Pack (1.0), Properties Support, JUnit (1.0), I18n for Java, TestNG-J (8.0), Copyright (8.1), XPathView + XSLT Support (4), IntelliLang (8.0), Android Support (10.0), UI Designer, Git Integration (8.1), XSLT-Debugger (1.4), Task Management (1.0), UI Designer (Core), GenerateToString (5.0), GitHub, Inspection Gadgets (1.0), Android Designer, Plugin DevKit (1.0) 
+2012-12-07 18:26:01,747 [   2078]   INFO - llij.ide.plugins.PluginManager - Disabled plugins: Ant Support (1.0), Groovy (9.0), Maven Integration, hg4idea (10.0), Subversion Integration (1.1), Commander (1.0.0), Gradle, CVS Integration (11) 
+2012-12-07 18:26:02,493 [   2824]   INFO - ellij.util.io.PagedFileStorage - lower=100; upper=200; buffer=10; mmap=true 
+2012-12-07 18:26:02,611 [   2942]   INFO - api.vfs.impl.local.FileWatcher - Starting file watcher: /usr/share/intellijidea-ce/bin/fsnotifier64 
+2012-12-07 18:26:02,623 [   2954]   INFO - api.vfs.impl.local.FileWatcher - Native file watcher is operational. 
+2012-12-07 18:26:03,303 [   3634]   INFO - jetbrains.ide.WebServerManager - web server started, port 63342 
+2012-12-07 18:26:04,057 [   4388]   INFO - s.impl.stores.FileBasedStorage - Document was not loaded for $APP_CONFIG$/macros.xml file is null 
+2012-12-07 18:26:04,061 [   4392]   INFO - s.impl.stores.FileBasedStorage - Document was not loaded for $APP_CONFIG$/quicklists.xml file is null 
+2012-12-07 18:26:04,180 [   4511]   INFO - pl.stores.ApplicationStoreImpl - 72 application components initialized in 2292 ms 
+2012-12-07 18:26:04,182 [   4513]   INFO - .intellij.idea.IdeaApplication - App initialization took 5230 ms 
+2012-12-07 18:26:04,204 [   4535]   INFO - s.impl.stores.FileBasedStorage - Document was not loaded for $APP_CONFIG$/customization.xml file is null 
+2012-12-07 18:26:06,103 [   6434]   INFO -                  TestNG Runner - Create TestNG Template Configuration 
+2012-12-07 18:26:06,134 [   6465]   INFO -                  TestNG Runner - Create TestNG Template Configuration 
+2012-12-07 18:26:06,598 [   6929]   INFO - ellij.project.impl.ProjectImpl - 121 project components initialized in 1793 ms 
+2012-12-07 18:26:06,771 [   7102]   INFO - le.impl.ModuleManagerComponent - 1 modules loaded in 173 ms 
+2012-12-07 18:26:07,969 [   8300]   INFO - .roots.impl.DirectoryIndexImpl - Directory index initialized in 749 ms, indexed 1310 directories 
+2012-12-07 18:26:07,976 [   8307]   INFO - pl.PushedFilePropertiesUpdater - File properties pushed in 4 ms 
+2012-12-07 18:26:08,019 [   8350]   INFO - s.impl.stores.FileBasedStorage - Document was not loaded for $APP_CONFIG$/plainTextFiles.xml file is null 
+2012-12-07 18:26:08,615 [   8946]   INFO - s.impl.stores.FileBasedStorage - Document was not loaded for $PROJECT_CONFIG_DIR$/codeStyleSettings.xml file is null 
+2012-12-07 18:26:08,617 [   8948]   INFO - s.impl.stores.FileBasedStorage - Document was not loaded for $PROJECT_CONFIG_DIR$/projectCodeStyle.xml file is null 
+2012-12-07 18:26:08,721 [   9052]   INFO - s.impl.stores.FileBasedStorage - Document was not loaded for $PROJECT_CONFIG_DIR$/fileColors.xml file is null 
+2012-12-07 18:26:09,495 [   9826]   INFO - s.impl.stores.FileBasedStorage - Document was not loaded for $PROJECT_CONFIG_DIR$/IntelliLang.xml file is null 
+2012-12-07 18:26:10,321 [  10652]   INFO - indexing.UnindexedFilesUpdater - Indexable files iterated in 2304 ms 
+2012-12-07 18:26:10,322 [  10653]   INFO - indexing.UnindexedFilesUpdater - Unindexed files update started: 1 files to update 
+2012-12-07 18:26:10,471 [  10802]   INFO - indexing.UnindexedFilesUpdater - Unindexed files update done in 149 ms 
+2012-12-07 18:26:12,093 [  12424]   INFO - tor.impl.FileEditorManagerImpl - Project opening took 7370 ms 
+2012-12-07 18:26:14,177 [  14508]   INFO - s.impl.stores.FileBasedStorage - Document was not loaded for $APP_CONFIG$/cachedDictionary.xml file is null 
+2012-12-07 18:26:58,773 [  59104]   INFO - s.impl.stores.FileBasedStorage - Document was not loaded for $APP_CONFIG$/intentionSettings.xml file is null 
+2012-12-07 18:27:12,016 [  72347]   INFO -                  TestNG Runner - Create TestNG Template Configuration 
+2012-12-07 18:27:12,017 [  72348]   INFO -                  TestNG Runner - Create TestNG Template Configuration 
+2012-12-07 18:27:12,021 [  72352]   INFO - ellij.project.impl.ProjectImpl - 24 project components initialized in 20 ms 
+2012-12-07 18:27:12,021 [  72352]   INFO - le.impl.ModuleManagerComponent - 0 modules loaded in 0 ms 
+2012-12-07 18:27:12,918 [  73249]   INFO - ins.android.sdk.AndroidSdkData - DDMLib terminated 
+2012-12-07 18:27:12,922 [  73253]   INFO - il.indexing.FileBasedIndexImpl - START INDEX SHUTDOWN 
+2012-12-07 18:27:12,945 [  73276]   INFO - il.indexing.FileBasedIndexImpl - END INDEX SHUTDOWN 
+2012-12-07 18:27:12,945 [  73276]   INFO - stubs.SerializationManagerImpl - START StubSerializationManager SHUTDOWN 
+2012-12-07 18:27:12,945 [  73276]   INFO - stubs.SerializationManagerImpl - END StubSerializationManager SHUTDOWN 
+2012-12-07 18:27:12,948 [  73279]   INFO - jetbrains.ide.WebServerManager - web server stopped 
+2012-12-07 18:27:12,948 [  73279]   INFO - .history.utils.LocalHistoryLog - Purging local history... 
+2012-12-07 18:27:12,949 [  73280]   INFO - .history.utils.LocalHistoryLog - Local history storage successfully closed. 
+2012-12-07 18:27:12,953 [  73284]   INFO - newvfs.persistent.PersistentFS - VFS dispose started 
+2012-12-07 18:27:12,955 [  73286]   WARN - api.vfs.impl.local.FileWatcher - Watcher terminated. 
+2012-12-07 18:27:12,964 [  73295]   INFO - newvfs.persistent.PersistentFS - VFS dispose completed 
+2012-12-07 18:27:13,003 [  73334]   INFO -        #com.intellij.idea.Main - ------------------------------------------------------ IDE SHUTDOWN ------------------------------------------------------ 

@@ -1,0 +1,16 @@
+{
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"Alignment",
+		"BracketHighlighter",
+		"Display Functions (Java)",
+		"Package Control",
+		"pastebin-sublime-plugin",
+		"SideBarEnhancements",
+		"SideBarGit",
+		"SublimeCodeIntel",
+		"Terminal",
+		"Theme - Soda"
+	]
+}

@@ -1,0 +1,12 @@
+[
+  { "keys": ["."], "command": "display_functions", 
+  "context": [
+      {
+        "operand": "source.java",
+        "operator": "equal", 
+        "match_all": true, 
+        "key": "selector"
+      }
+    ]
+  }
+]

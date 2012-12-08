@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <component name="UsagesStatistic" time="1354613232576" allowed="true" show-notification="false" period="weekly">
+    <group id="Look and Feel" priority="0.0" data="Linux - IDEA (4.5 default)=1" />
+    <group id="disabled-plugins" priority="0.0" data="hg4idea=1,Subversion=1,com.intellij.commander=1,org.jetbrains.plugins.gradle=1,org.intellij.groovy=1,CVS=1,org.jetbrains.idea.maven=1,AntSupport=1" />
+    <group id="features counts" priority="0.0" data="execute.JUnit.Run=46,execute.JUnit.Debug=20,execute.Application.Run=288,execute.Application.Debug=1" />
+    <group id="language-level" priority="0.0" data="JDK_1_6=17" />
+    <group id="module type" priority="0.0" data="JAVA_MODULE=17" />
+    <group id="non-bundled-plugins" priority="0.0" data="com.intellij=1" />
+    <group id="productivity" priority="0.0" data="codeassists.comment.block=42,editing.completion.basic=2089,find.recent.search=3,editing.completion.global.member.name=1,editing.completion.classname=2,editing.completion.second.basic=35,editing.completion.replace=13,ui.tree.speedsearch=16,editing.completion.finishByDotEtc=270,editing.completion.variable.name=887,editing.select.word=1736,codeassists.highlight.throws=115,codeassists.highlight.return=187,navigation.goto.declaration=48,editing.completion.camelHumps=4,codeassists.comment.line=14,ui.horizontal.scrolling=1,navigation.popup.class=1,navigation.recent.files=1,editing.completion.smarttype.general=4,codeassists.highlight.implements=5,refactoring.rename=5,codeassists.overrideimplement=4,refactoring.copyClass=1,editing.completion.second.smarttype.chain=1" />
+    <group id="run-configuration-type-temp" priority="0.0" data="JUnit=2,Application=15" />
+    <group id="vcs" priority="0.0" data="Git=3" />
+  </component>
+</application>
+

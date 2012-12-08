@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <component name="DimensionService">
+    <location key="#com.intellij.codeInsight.template.impl.EditVariableDialog.0.0.1920.1056" x="799" y="393" />
+    <location key="#com.intellij.ide.actions.ChooseComponentsToExportDialog.20.0.1260.776" x="448" y="234" />
+    <location key="OptionsEditor.0.0.1920.1056" x="18" y="0" />
+    <location key="extract.method.dialog.20.0.1260.776" x="383" y="175" />
+    <location key="chooseDestDirectoryDialog.0.0.1920.1056" x="754" y="310" />
+    <location key="FileChooserDialogImpl.0.0.1920.1056" x="749" y="270" />
+    <location key="#com.intellij.refactoring.memberPushDown.PushDownDialog.20.0.1260.776" x="350" y="183" />
+    <location key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog.20.0.1260.776" x="383" y="147" />
+    <location key="#com.intellij.execution.impl.EditConfigurationsDialog.20.0.1260.776" x="233" y="47" />
+    <location key="NewModule_or_Project.wizard.20.0.1260.776" x="188" y="97" />
+    <location key="NewModule_or_Project.wizard" x="190" y="86" />
+    <location key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate.0.0.1920.1056" x="695" y="422" />
+    <location key="com.intellij.testIntegration.createTest.CreateTestDialog.0.0.1920.1056" x="705" y="298" />
+    <location key="#com.intellij.ide.actions.ChooseComponentsToExportDialog.0.0.1920.1056" x="829" y="402" />
+    <location key="NewModule_or_Project.wizard.0.0.1920.1056" x="508" y="212" />
+    <location key="#com.intellij.codeInsight.template.impl.EditVariableDialog.20.0.1260.776" x="365" y="262" />
+    <location key="#Auto_Import.0.0.1920.1056" x="743" y="288" />
+    <location key="FileChooserDialogImpl" x="298" y="132" />
+    <location key="#Inspections.0.0.1920.1056" x="603" y="212" />
+    <location key="#com.intellij.execution.impl.EditConfigurationsDialog.0.0.1920.1056" x="553" y="186" />
+    <location key="com.intellij.ide.passwordSafe.impl.providers.masterKey.ResetPasswordDialog.20.0.1260.776" x="466" y="313" />
+    <location key="FileChooserDialogImpl.20.0.1260.776" x="351" y="135" />
+    <location key="#com.intellij.ide.util.TreeClassChooserDialog.0.0.1920.1056" x="702" y="326" />
+    <location key="#com.intellij.ide.util.MemberChooser.20.0.1260.776" x="458" y="122" />
+    <location key="#Notifications.0.0.1920.1056" x="727" y="265" />
+    <location key="#Project_Structure.20.0.1260.776" x="121" y="0" />
+    <location key="OptionsEditor.20.0.1260.776" x="42" y="7" />
+    <location key="findTextDialog.0.0.1920.1056" x="761" y="299" />
+    <location key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog.0.0.1920.1056" x="802" y="247" />
+    <location key="#com.intellij.refactoring.rename.AutomaticRenamingDialog.20.0.1260.776" x="403" y="98" />
+    <location key="#com.intellij.fileTypes.FileTypeChooser.0.0.1920.1056" x="688" y="334" />
+    <location key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog.0.0.1920.1056" x="703" y="287" />
+    <location key="EditParametersPopupWindow.20.0.1260.776" x="453" y="267" />
+    <location key="DiffWindow.0.0.1920.1056" x="119" y="100" />
+    <size key="#com.intellij.codeInsight.template.impl.EditVariableDialog.0.0.1920.1056" width="797" height="246" />
+    <size key="GridCell.Tab.0.bottom.20.0.1260.776" width="1237" height="188" />
+    <size key="#com.intellij.ide.actions.ChooseComponentsToExportDialog.20.0.1260.776" width="395" height="306" />
+    <size key="OptionsEditor.0.0.1920.1056" width="1902" height="1056" />
+    <size key="chooseDestDirectoryDialog.0.0.1920.1056" width="415" height="426" />
+    <size key="Vcs.CompareWithSelectedRevision.Popup" width="302" height="300" />
+    <size key="GridCell.Tab.1.left.0.0.1920.1056" width="1877" height="345" />
+    <size key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog.20.0.1260.776" width="526" height="480" />
+    <size key="#com.intellij.execution.impl.EditConfigurationsDialog.20.0.1260.776" width="826" height="680" />
+    <size key="NewModule_or_Project.wizard.20.0.1260.776" width="916" height="580" />
+    <size key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate.0.0.1920.1056" width="542" height="209" />
+    <size key="#com.intellij.ide.actions.ChooseComponentsToExportDialog.0.0.1920.1056" width="274" height="250" />
+    <size key="NewModule_or_Project.wizard.0.0.1920.1056" width="916" height="630" />
+    <size key="#com.intellij.codeInsight.template.impl.EditVariableDialog.20.0.1260.776" width="554" height="237" />
+    <size key="#Auto_Import.0.0.1920.1056" width="446" height="477" />
+    <size key="GridCell.Tab.1.center.0.0.1920.1056" width="1877" height="345" />
+    <size key="FileChooserDialogImpl" width="602" height="534" />
+    <size key="#com.intellij.execution.impl.EditConfigurationsDialog.0.0.1920.1056" width="826" height="681" />
+    <size key="GridCell.Tab.1.right.20.0.1260.776" width="1214" height="311" />
+    <size key="#com.intellij.ide.util.TreeClassChooserDialog.0.0.1920.1056" width="527" height="401" />
+    <size key="com.intellij.ide.passwordSafe.impl.providers.masterKey.ResetPasswordDialog.20.0.1260.776" width="359" height="147" />
+    <size key="#Notifications.0.0.1920.1056" width="478" height="524" />
+    <size key="GridCell.Tab.0.center.0.0.1920.1056" width="1877" height="127" />
+    <size key="OptionsEditor.20.0.1260.776" width="1226" height="769" />
+    <size key="#Project_Structure.20.0.1260.776" width="1050" height="769" />
+    <size key="ProcessPopupWindow" width="315" height="109" />
+    <size key="#com.intellij.refactoring.rename.AutomaticRenamingDialog.20.0.1260.776" width="478" height="571" />
+    <size key="#com.intellij.fileTypes.FileTypeChooser.0.0.1920.1056" width="556" height="385" />
+    <size key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog.0.0.1920.1056" width="526" height="480" />
+    <size key="EditParametersPopupWindow.20.0.1260.776" width="378" height="232" />
+    <size key="DiffWindow.0.0.1920.1056" width="1702" height="861" />
+    <size key="GridCell.Tab.1.right.0.0.1920.1056" width="1877" height="345" />
+    <size key="GridCell.Tab.0.right.20.0.1260.776" width="1237" height="188" />
+    <size key="GridCell.Tab.0.left.20.0.1260.776" width="1237" height="188" />
+    <size key="extract.method.dialog.20.0.1260.776" width="526" height="423" />
+    <size key="GridCell.Tab.1.center.20.0.1260.776" width="1214" height="311" />
+    <size key="GridCell.Tab.1.bottom.0.0.1920.1056" width="1877" height="345" />
+    <size key="GridCell.Tab.0.left.0.0.1920.1056" width="1877" height="127" />
+    <size key="GridCell.Tab.1.bottom.20.0.1260.776" width="1214" height="311" />
+    <size key="FileChooserDialogImpl.0.0.1920.1056" width="600" height="499" />
+    <size key="#com.intellij.refactoring.memberPushDown.PushDownDialog.20.0.1260.776" width="592" height="408" />
+    <size key="NewModule_or_Project.wizard" width="916" height="630" />
+    <size key="com.intellij.testIntegration.createTest.CreateTestDialog.0.0.1920.1056" width="529" height="458" />
+    <size key="GridCell.Tab.0.center.20.0.1260.776" width="1237" height="188" />
+    <size key="GridCell.Tab.0.right.0.0.1920.1056" width="1877" height="127" />
+    <size key="#Inspections.0.0.1920.1056" width="726" height="630" />
+    <size key="#com.intellij.ide.util.MemberChooser.20.0.1260.776" width="376" height="530" />
+    <size key="FileChooserDialogImpl.20.0.1260.776" width="608" height="506" />
+    <size key="findTextDialog.0.0.1920.1056" width="410" height="455" />
+    <size key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog.0.0.1920.1056" width="326" height="555" />
+    <size key="GridCell.Tab.0.bottom.0.0.1920.1056" width="1877" height="127" />
+    <size key="GridCell.Tab.1.left.20.0.1260.776" width="1214" height="311" />
+    <extendedState key="DiffWindow" state="0" />
+  </component>
+  <component name="LafManager">
+    <laf class-name="idea.laf.classname" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlDoctype.MigrateToHtml5" value="true" />
+    <property name="junit_statistics_table_columnsWidth5" value="75" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="FileTemplates.CurrentTab" value="Templates" />
+    <property name="file.colors.enable.non.project" value="Yellow" />
+    <property name="SingleInspectionProfilePanel.HORIZONTAL_DIVIDER_PROPORTION" value="0.5" />
+    <property name="project.jdk.splitter" value="0.20000002" />
+    <property name="RunConfigurable.dividerProportion" value="0.3" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="SingleInspectionProfilePanel.VERTICAL_DIVIDER_PROPORTION" value="0.5" />
+    <property name="ChangesViewManager.DETAILS_SPLITTER_PROPORTION" value="0.5" />
+    <property name="default.storage.format" value=".idea (directory based)" />
+    <property name="junit_statistics_table_columnsWidth4" value="75" />
+    <property name="junit_statistics_table_columnsWidth3" value="75" />
+    <property name="junit_statistics_table_columnsWidth2" value="75" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="junit_statistics_table_columnsWidth1" value="75" />
+    <property name="junit_statistics_table_columnsWidth0" value="75" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="FileTemplates.SelectedTemplate" value="Html" />
+    <property name="junit_statistics_table_columnsOrder4" value="4" />
+    <property name="junit_statistics_table_columnsOrder3" value="3" />
+    <property name="Non-Project Files" value="Yellow" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="junit_statistics_table_columnsOrder2" value="2" />
+    <property name="filter_non_existing" value="false" />
+    <property name="junit_statistics_table_columnsOrder1" value="1" />
+    <property name="installation.uid" value="f6b453f2-08eb-468d-8aac-bb986d11d3bf" />
+    <property name="junit_statistics_table_columnsOrder0" value="0" />
+    <property name="export.settings.path" value="$USER_HOME$/.IdeaIC11/config/settings.jar" />
+    <property name="file.colors.enable.tests" value="Green" />
+    <property name="test_tree_console_proprtion" value="0.2" />
+    <property name="junit_statistics_table_columnsOrder5" value="5" />
+    <property name="MemberChooser.copyJavadoc" value="true" />
+    <property name="com.intellij.openapi.roots.ui.configuration.TabbedModuleEditor.selectedEditor" value="Sources" />
+    <property name="Tests" value="Green" />
+    <property name="ColorChooser.RecentColors" value="255-176-19-255,,,255-141-25-255,,,255-0-194-255,,,119-69-255-255,,,103-140-177-255,,,255-104-20-255,,,237-94-16-255,,,217-86-14-255,,,0-0-0-255,,,239-239-239-255,,,68-68-68-255,,,64-64-64-255" />
+  </component>
+</application>
+
