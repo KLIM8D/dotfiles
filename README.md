@@ -1,7 +1,7 @@
 dotfiles
 ========
 
-config files for bash, vim, weechat, openbox, tint2 & conky
+config files for bash, vim, weechat, openbox, tint2, conky, Sublime Text 2 & IntelliJ Idea
 
 ## Screenshots
 ![Screenshot 1](https://raw.github.com/KLIM8D/dotfiles/master/screenshot.png)
