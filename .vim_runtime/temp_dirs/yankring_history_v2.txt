@@ -1,44 +1,100 @@
-(F) Fix page order (ikke implenmenteret endnu) +pirken @frontend @backen,V
-(B) Få stabilt OC +diverse,V
-(F) Fix så man ikke kan skjule indstillinger fra admin menuen +pirken @backend,V
-(A) Færdig gør og lav frontend side til nyheder evt. med sort +pirken @backend,V
-(F) Oversæt backend til dansk +pirken @backend,V
-(A) Gør sådan at dynamic content sider har unikt url +pirken @backend,V
-(B) Nyhedsbrev fix, evt. med template @backend +pirken,V
-686868,v
-/w,v
-git@github.com:KLIM8D/ucn-2semproject-dm79-group2.git,v
- public static int selectDropdownIndex(JComboBox<String> dropdown, String findValue)    {        int drpIndex = 0;        for (int i=0; i< dropdown.getItemCount(); i++)        {            String currentValue = dropdown.getItemAt(i);            if(findValue.equalsIgnoreCase(currentValue))            {                drpIndex = i;                break;            }        }        return drpIndex;    },v
-public static Date addDays(Date date, int days)    {        Calendar cal = Calendar.getInstance();        cal.setTime(date);        cal.add(Calendar.DATE, days); //minus number would decrement the days        return cal.getTime();    },v
-###sql:    Contains the SQL files for creation of the database, tables and relations###uml:    Contains UML diagrams for this project,v
-Nipsey Hussle,v
-Chris hvis du keder dig nu du ikke kan spille starcraft kan du ,v
-  "686868,V
-Buffer. (eg. ':b 1' g,v
-http://www.streetammo.dk/commodity/46924-carhartt-vicious-pant,v
-Så han kan nærmest have fradrag ,v
-img_2000123,v
-#f5cd4c,v
-    set guioptions+=r,V
-exe 'hi LineNr       guifg='.s:border1_fg .' guibg='.s:border1_bg .' gui=none ',v
-https://raw.github.com/davidhalter/jedi/master/screenshot_function.png,V
-https://raw.github.com/davidhalter/jedi/master/screenshot_function.png,v
-highlight LineNr guifg=#050505,v
-https://github.com/davidhalter/jedi-vim,v
-git@github.com:davidhalter/jedi-vim.git,v
-git@github.com:ervandew/supertab.git,v
-" set guioptions=-T,V
-" Remove menus etc. from gVimset guioptions-=m" set guioptions=-Tset guioptions+=r,v
-set guioptions-=m" set guioptions=-Tset guioptions+=r,v
-			        " use vim defaults,v
-" window position,V
-" window width,V
-run the Flake8 check every time you write a Python file,v
-autocmd BufWritePost *.py call Flake8(),v
-"map F2 to open previous buffer,V
-"map F2 to open previous buffer,v
-set guioptions=-mset guioptions=-Tset guioptions=-rset stal=2,v
-"KEYBINDSmap <F2> :previous<CR>                  " map F2 to open previous buffermap <F3> :next<CR>                      " map F3 to open next buffermap <F4> :NERDTreeToggle<CR>            " map F4 to open NERDTreenmap <C-d> :q!<CR>                      " map CTRL + d to quitimap <C-d> <ESC><C-d>                   " map CTRL + d to quit (INSERT MODE)nmap <C-s> :w<CR>                       " map CTRL + s to saveimap <C-s> <ESC><C-s>i			        " map CTRL + s to save (INSERT MODE)map <C-t> :tabnew<CR>                   " map CTRL + t new tabmap <C-n> :vnew<CR>                     " map CTRL + n new verticalmap <C-e> :Explore<CR>                  " map CTRL + e open Exploremap <silent><A-Right> :tabnext<CR>      " map Alt-RightArrow to jump to the next tabmap <silent><A-Left> :tabprevious<CR>   " map Alt-LeftArrow to jump to the previous tabnmap <C-V> "+gP				            " Pasteimap <C-V> <ESC><C-V>i			        " Paste (INSERT MODE)vmap <C-C> "+y				            " Copyimap jj <ESC>                           " Escape insert modenmap <C-z> :u<CR>                       " map CTRL + z to undo changesimap <C-z> <ESC><C-z>i                  " map CTRL + z to undo changes (INSERT MODE)nmap <C-y> :redo<CR>                    " map CTRL + y to redo changesimap <C-y> <ESC><C-y>i                  " map CTRL + y to redo changes (INSERT MODE)set guioptions=-mset guioptions=-Tset guioptions=-rset stal=2,v
-set nowrap				            " stop lines from wrappingset lines=75				        " window heightset columns=130				        " window widthwinpos 75 50				        " window position,v
-set nocompatible			        " use vim defaultsset number				            " show line numbers,v
-git@github.com:amix/vimrc.git,v
+            c = '\\';,V
+            c = '\\t';,V
+,V
+    /* We haven't met 'else' yet, so we have to be a little clumsy */,V
+#include <stdio.h>int main(){    int c, n1;    n1 = 0;    while((c = getchar()) != EOF)        if(c == ' ')            c =;    printf("%d\n", n1);    return 0;},V
+#include <stdio.h>int main(void){  int c;  int inspace;  inspace = 0;  while((c = getchar()) != EOF)  {    if(c == ' ')    {      if(inspace == 0)      {        inspace = 1;        putchar(c);      }    }    /* We haven't met 'else' yet, so we have to be a little clumsy */    if(c != ' ')    {      inspace = 0;      putchar(c);    }  }  return 0;},v
+    c = getchar();,V
+    },V
+        c = getchar();,V
+*,v
+(5.0/9.0) ,v
+#include <stdio.h>/* print Fahrenheit-Celcius table * for fahr = 0, 20, ..., 300 */int main(){    float fahr, celcius;    int lower, upper, step;    lower = 0; /* lower limit */    upper = 300; /* upper limit */    step = 20;    fahr = lower;    printf("---Celcius   Fahrenheit---\n");    while (fahr <= upper) {        celcius = (5.0/9.0) * (fahr - 32.0 );        printf("%6.0f\t%11.1f\n", fahr, celcius);        fahr = fahr + step;    }    return 0;},v
+#include <stdio.h>/* print Celcius-Fahrenheit table * for fahr = 0, 20, ..., 300 */int main(){    float fahr, celcius;    int lower, upper, step;    lower = 0; /* lower limit */    upper = 300; /* upper limit */    step = 20;    celcius = lower;    printf("---Fahrenheit   Celcius---\n");    while (celcius <= upper) {        fahr = (5.0/9.0) / (celcius + 32.0 );        printf("%6.0f\t%11.1f\n", celcius, fahr);        celcius = celcius + step;    }    return 0;},v
+Fahrenheit,v
+http://www.mbc.dk/Produkter/Sog/Alle/NBA_2K14,v
+    printf("Hello, world\b\n");,V
+    printf("Hello, world\n");,v
+    int *p; ,V
+Uge		Man	Tirs	Ons	Tors	Fre36		Vejledermøde	C programmering 	C programmering 	C programmering 	C programmering 			Kap. 1	Kap. 2	Kap. 3	Kap. 437		C programmering 	C programmering 	C programmering 	C programmering 	C programmering 		Kap. 5	Kap. 6	Kap. 7	Kap. 8	Opgaver38		C programmering 	C programmering 	C programmering 	C programmering 	C programmering 		Opgaver	Opgaver	Threads/Parallel	Threads/Parallel	Threads/Parallel39		Vejledermøde	C++ programmering	C++ programmering	C++ programmering	C++ programmering		C++ (opstart)				40		Selvvalgt emne	Selvvalgt emne	Selvvalgt emne	Selvvalgt emne	Selvvalgt emne						41		Selvvalgt emne	Selvvalgt emne	Selvvalgt emne	Selvvalgt emne	Selvvalgt emne						42		Specialiseringsrapport	Specialiseringsrapport	Specialiseringsrapport	Specialiseringsrapport	Aflevering,V
+senest d. 18/10-2013,v
+/Content/ImageSlider/images/m-close.png,v
+maxRequestLength="1048576",v
+<security>      <requestFiltering>         <requestLimits maxAllowedContentLength="1073741824" />      </requestFiltering>   </security>,v
+20048576,v
+emnerne,v
+https://entwine.visualstudio.com/DefaultCollection/KidsLink/,v
+91.150.237.219,v
+rdesktop -g 90% -P -z -x l -r sound:off 91.150.237.219,V
+Man of steel,V
+dev01,v
+rdesktop -g 1024x768 -P -z -x l -r sound:off -u administrator 46.163.69.114 ,v
+Iron Man 3 - Dårlig lyd,V
+Star Trek Into the Darkness,V
+Now you see Me - Kun cam,V
+R.I.P.D. - Kun cam,V
+public static class TmpData    {        public static List<Nursery> Data { get; set; }        public static void InitList()        {            Data = new List<Nursery>();            var nursery = new Nursery()            {                Id = 1,                Name = "Natur børnehaven",                Groups = new List<NurseryGroup>()                                      {                                          new NurseryGroup()                                              {                                                  Id = 15,                                                  Name = "Birke stuen", Childs = new List<Child>                                                      {                                                          new Child() {Id = 12, Name = "Julie"},                                                          new Child() {Id = 123, Name = "Martin"},                                                          new Child() {Id = 123, Name = "Mathias"},                                                          new Child() {Id = 123, Name = "Oliver"},                                                          new Child() {Id = 123, Name = "Thomas"},                                                          new Child() {Id = 123, Name = "Sine"},                                                          new Child() {Id = 123, Name = "Lone"},                                                          new Child() {Id = 123, Name = "Mette"},                                                          new Child() {Id = 123, Name = "Josefine"}                                                      }                                              },                                              new NurseryGroup()                                              {                                                  Id = 10,                                                  Name = "Kastagne stuen", Childs = new List<Child>                                                      {                                                          new Child() {Id = 12, Name = "Britta"},                                                          new Child() {Id = 123, Name = "Julia"},                                                          new Child() {Id = 123, Name = "Lise"},                                                          new Child() {Id = 123, Name = "Jens"},                                                          new Child() {Id = 123, Name = "Mogens"},                                                          new Child() {Id = 123, Name = "Morten"},                                                          new Child() {Id = 123, Name = "Mikkel"},                                                          new Child() {Id = 123, Name = "Mads"},                                                          new Child() {Id = 123, Name = "Mia"}                                                      }                                              }                                      }            };            Data.Add(nursery);        }    },v
+$(document).ready(function() {    // setup the dialog    $("#client-detail-modal").dialog({        modal: true,        autoOpen: false,        height: 100,        width: 200    });    // bind the click event    $(".dialog-trigger").on("click", function(event) {        event.preventDefault();        $("#client-detail-modal").dialog("open");  // show dialog    });});,v
+6sjvqL9bAuakhUnk,v
+lycus.org,v
+grep -r '^\(CONTROL\|ENABLE\)_' /etc/laptop-mode/conf.d,V
+n,v
+#! /bin/bashSLEEP_TIME=5   # Default time between checks.SAFE_PERCENT=30  # Still safe at this level.DANGER_PERCENT=15  # Warn when battery at this level.CRITICAL_PERCENT=5  # Hibernate when battery at this level.NAGBAR_PID=0export DISPLAY=:0.0function launchNagBar{    i3-nagbar -m 'Battery low!' -b 'Hibernate!' 'pm-hibernate' >/dev/null 2>&1 &    NAGBAR_PID=$!}function killNagBar{    if [[ $NAGBAR_PID -ne 0 ]]; then        ps -p $NAGBAR_PID | grep "i3-nagbar"        if [[ $? -eq 0 ]]; then            kill $NAGBAR_PID        fi        NAGBAR_PID=0    fi}while [ true ]; do    killNagBar    if [[ -n $(acpi -b | grep -i discharging) ]]; then        rem_bat=$(acpi -b | grep -Eo "[0-9]+%" | grep -Eo "[0-9]+")        if [[ $rem_bat -gt $SAFE_PERCENT ]]; then            SLEEP_TIME=10        else            SLEEP_TIME=5            if [[ $rem_bat -le $DANGER_PERCENT ]]; then                SLEEP_TIME=2                launchNagBar            fi            if [[ $rem_bat -le $CRITICAL_PERCENT ]]; then                SLEEP_TIME=1                pm-hibernate            fi        fi    else        SLEEP_TIME=10    fi    sleep ${SLEEP_TIME}mdone,v
+/home/klim/workspace/UDPChat,v
+curl -O http://pkgbuild.com/git/aur-mirror.git/plain/vmware-patch/vmnet-9.0.2-5.0.2-3.10.patch,v
+Michael Klitgaard,v
+#define NELEMS(x)  (sizeof(x) / sizeof(x[0])),v
+sizeof(a)/sizeof(a[0]);,v
+t i = 0;,v
+"Morten";,v
+/* Using scanf isn't really the best way to do this; we'll talk about that    in the next tutorial, on strings */,v
+LuxCare.dk,v
+NOSOLOSHOPPING.COM,v
+/* The -> acts somewhat like the * when                                    does when it is used with pointers                                    It says, get whatever is at that memory                                   address Not "get what that memory address                                   is"*/,v
+/* Yes, you need the & when dealing with                            structures and using pointers to them*/,v
+ {'m','o','r','t','e','n'};,v
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags,V
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete,V
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS,V
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags,V
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS,V
+" Enable omni completion.,V
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSSautocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTagsautocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJSautocmd FileType python setlocal omnifunc=pythoncomplete#Completeautocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags,v
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS,V
+" Plugin key-mappings.inoremap <expr><C-g>     neocomplete#undo_completion()inoremap <expr><C-l>     neocomplete#complete_common_string()" Recommended key-mappings." <CR>: close popup and save indent.inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>function! s:my_cr_function()  return neocomplete#smart_close_popup() . "\<CR>"  " For no inserting <CR> key.  "return pumvisible() ? neocomplete#close_popup() : "\<CR>"endfunction" <TAB>: completion.inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"" <C-h>, <BS>: close popup and delete backword char.inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"inoremap <expr><C-y>  neocomplete#close_popup()inoremap <expr><C-e>  neocomplete#cancel_popup()" Close popup by <Space>."inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"" For cursor moving in insert mode(Not recommended)"inoremap <expr><Left>  neocomplete#close_popup() . "\<Left>""inoremap <expr><Right> neocomplete#close_popup() . "\<Right>""inoremap <expr><Up>    neocomplete#close_popup() . "\<Up>""inoremap <expr><Down>  neocomplete#close_popup() . "\<Down>"" Or set this."let g:neocomplete#enable_cursor_hold_i = 1" Or set this."let g:neocomplete#enable_insert_char_pre = 1" AutoComplPop like behavior."let g:neocomplete#enable_auto_select = 1" Shell like behavior(not recommended)."set completeopt+=longest"let g:neocomplete#enable_auto_select = 1"let g:neocomplete#disable_auto_complete = 1"inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"" Enable omni completion.autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSSautocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTagsautocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJSautocmd FileType python setlocal omnifunc=pythoncomplete#Completeautocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags" Enable heavy omni completion.if !exists('g:neocomplete#sources#omni#input_patterns')  let g:neocomplete#sources#omni#input_patterns = {}endiflet g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::',v
+" Define dictionary.let g:neocomplete#sources#dictionary#dictionaries = {    \ 'default' : '',    \ 'vimshell' : $HOME.'/.vimshell_hist',    \ 'scheme' : $HOME.'/.gosh_completions'        \ },v
+" Disable AutoComplPop.let g:acp_enableAtStartup = 0" Use neocomplete.let g:neocomplete#enable_at_startup = 1" Use smartcase.let g:neocomplete#enable_smart_case = 1" Set minimum syntax keyword length.let g:neocomplete#sources#syntax#min_keyword_length = 3let g:neocomplete#lock_buffer_name_pattern = '\*ku\*',v
+git@github.com:Shougo/neocomplete.vim.git,v
+0001081079,v
+http://www.myburger2013.dk/,v
+annonceret,v
+/* Note the use of the * to get the value */,v
+/* Put a value in x, we could also use p here */,v
+/* Read it, "assign the address of x to p" */,v
+Zero Dark Thirty,V
+33646070,v
+185.31.16.133:80,v
+grub-mkconfig -o /boot/grub/grub.cfg,v
+margin-left: auto; margin-right: auto; display: block;,v
+    <meta name="author" content="Morten Klim Sørensen" />,V
+    <meta name="copyright" content="Morten Klim Sørensen" />,V
+    <meta name="robots" content="index,follow" />,V
+    <meta name="revisit" content="After 14 days" />,V
+    <meta name="language" content="" />,V
+272C31,v
+333940;,v
+#A21D20,v
+a:visited { color: #C14040; } ,v
+ad and use “all right” as two words, and stay away  ,v
+a:hover {    color: #333333;},v
+a:visited {    color: #C14040;},v
+    </style>,V
+#333940,v
+        #about_btn{background-image:url('/Content/images/about_btn_mouseover.png');height:28px;width:102px;display:block;},V
+    <style type="text/css">,V
+    ,V
+    <![endif]-->,V
+        </style>,V
+            img.b{position:absolute;border:0;background:#fff no-repeat 0 -2000px;},V
+            img.a{position:absolute;z-index:10;border:0;background:#fff no-repeat 0 -2000px;},V
+        <style>,V

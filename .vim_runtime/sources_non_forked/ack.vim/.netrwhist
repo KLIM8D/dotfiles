@@ -1,3 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =4
 let g:netrw_dirhist_1='/home/klim'
+let g:netrw_dirhist_2='/home/klim/workspace/shell/dotfiles/.weechat/script'
+let g:netrw_dirhist_3='/home/klim/workspace/shell/dotfiles/.weechat/xfer'
+let g:netrw_dirhist_4='/tmp'

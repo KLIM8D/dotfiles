@@ -143,6 +143,10 @@ set tm=500
 " Add a bit extra margin to the left
 set foldcolumn=1
 
+" Syntastic
+let g:syntastic_auto_loc_list=1
+let g:syntastic_disabled_filetypes=['html']
+let g:syntastic_enable_signs=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -325,6 +329,7 @@ set laststatus=2
 
 " Format the status line
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l
+"set statusline+=%6*%{SyntasticStatuslineFlag()}%* "
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
