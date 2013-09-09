@@ -12,73 +12,73 @@
 ========== Navigation ==========
 
 1/2 ½	BOL (Begin-of-line)
-0	BOL (Begin-of-line)
-$	EOL (End-of-line)
+0	    BOL (Begin-of-line)
+$	    EOL (End-of-line)
 
-H	Goto HEADER (Top of the screen)
-M	Goto MIDDLE of BUFFER
-L	Goto last (bottom).
+H	    Goto HEADER (Top of the screen)
+M	    Goto MIDDLE of BUFFER
+L	    Goto last (bottom).
 
-gg	(BOF) Beginning of File
-G	(EOF) End of the file. 
-10G	Goto line 10
-:10	Goto line 10
+gg	    (BOF) Beginning of File
+G	    (EOF) End of the file. 
+10G	    Goto line 10
+:10	    Goto line 10
 
-gd	Goto Definition of Variable
+gd	    Goto Definition of Variable
 
 Ctrl+D	Page-by-page scrolling
 
 CTRL+O	Last location (cursor)
 CTRL-I	Next location (cursor)
 
-*	Next word
-#	Previous word
+*	    Next word
+#	    Previous word
 
-%	on brackets {} () [] will find the matching one.
+%	    on brackets {} () [] will find the matching one.
 
 
 
 ========== Change ==========
 
-I 	INSERT (at beginning)
-A 	INSERT (at end)
+I 	    INSERT (at beginning)
+A 	    INSERT (at end)
 
-ci}	Change inside brackets
-vi}	Select inside brackets
+ci}	    Change inside brackets
+vi}	    Select inside brackets
 
 dgg 	Delete to top
-dG 	Delete to bottom 	
+dG 	    Delete to bottom 	
 
-d^	Delete to start of line
-D	Delete to end of line (or d$)
-dt;	Delete until ;
+d^	    Delete to start of line
+D	    Delete to end of line (or d$)
+dt;	    Delete until ;
 
-d} 	Delete next p-graph 	
-d{ 	Delete previous p-graph
+d} 	    Delete next p-graph 	
+d{ 	    Delete previous p-graph
 
-j	Join line to Above
-J	Join line to below
+j	    Join line to Above
+J	    Join line to below
 
-cc	Replace Line
-S	Replace Line
+cc	    Replace Line
+S	    Replace Line
 
-s	Replace Letter (Delete then Insert Mode)
-cw	Replace word
-c$	Replace to EOL
+s	    Replace Letter (Delete then Insert Mode)
+cw	    Replace word
+c$	    Replace to EOL
 
 deep	Swap two words in front of cursor (Cursor on empty space)
-ddp	Swap two lines
+ddp	    Swap two lines
 
-g-	Undo Change
-u	Undo Change
-g+	Redo Change
+g-	    Undo Change
+u	    Undo Change
+g+	    Redo Change
 CTRL+R	Redo Change
 
-y	Copy marked text
-Y	Copy/Yank whole line
-y$	Copy/Yank whole line
-2yy	Copy 2 lines
-yw	Copy word
+y	    Copy marked text
+Y	    Copy/Yank whole line
+y$	    Copy/Yank whole line
+2yy	    Copy 2 lines
+yw	    Copy word
 
 ALT+j	Move current line UP
 ALT+k	Move current line DOWN
@@ -87,7 +87,7 @@ CTRL-6	Switch between open buffers
 ggVG	Select All
 ggvG=	Auto-indenting
 
-x	Delete current character
+x	    Delete current character
 
 CTRL+A	Increment a Number
 
@@ -96,21 +96,27 @@ CTRL+A	Increment a Number
 
 ========== Macro ==========
 
-q	Record Macro
-qa	Run macro (a)
-3@q	Run macro 3 times
+q	        Record Macro
+qa	        Run macro (a)
+3@q	        Run macro 3 times
 
 
 
 ========== Navigation/Files ==========
 
-:cwd	Show current working directory
-:lcwd	Show current (Tab/Window) directory
-:ls	Show current buffers
-:cd	Change directory
-:lcd	Change current (Tab/Window) directory
+:cwd	                Show current working directory
+:lcwd	                Show current (Tab/Window) directory
+:ls	                    Show current buffers
+:cd	                    Change directory
+:lcd	                Change current (Tab/Window) directory
 
+CTRL + w + w            Move to next window
+CTRL + w + l            Move to window on the right of current
+CTRL + w + h            Move to window on the left of current
 
+CTRL + w; SHIFT + L     Rearrange window, to far right (move window right)
+CTRL + w; SHIFT + H     Rearrange window, to far left (move window left)
+CTRL + W + R            Rotate window
 
 ========== Visual commands ========== 
 >	Indent Right
@@ -122,11 +128,11 @@ v   Select range of text with arrow keys
 
 ========== Search / Replace ==========
 
-/			Search
-<SPACE>			Search
-?       		Backwards Search
-n			Next Search ¯
-N			Previous Search
+/			        Search
+<SPACE>			    Search
+?       		    Backwards Search
+n			        Next Search ¯
+N			        Previous Search
 
 :bufdo /searchstr/	Search in all open files
 
@@ -137,8 +143,8 @@ N			Previous Search
 
 :rs/foo/bar/a		Substitute foo with bar. r determines the range and a determines the arguments.
 
-:g/^#/d			Delete all lines that begins with #
-:g/^$/d			Delete all lines that are empty
+:g/^#/d			    Delete all lines that begins with #
+:g/^$/d			    Delete all lines that are empty
 
 :ab mail mail@provider.org 	Define mail as abbreviation of mail@provider.org
 
@@ -167,14 +173,14 @@ z0		Open all folds under the cursor
 
 ========== Plugins / Extensions ========== 
 
-,f		Most Recent Files (MRU)
-,j		PeepOpen
-,nn		NERDTree Toogle
-,nb		NERDTree From Bookmark
-,nf		NERDTree Find
-,o		BufExplorer
-CTRL-j		Trigger snippet
-CTRL+TAB	See all available snippets
+,f		     Most Recent Files (MRU)
+,j		     PeepOpen
+,nn		     NERDTree Toogle
+,nb		     NERDTree From Bookmark
+,nf		     NERDTree Find
+,o		     BufExplorer
+CTRL-j		 Trigger snippet
+CTRL+TAB	 See all available snippets
 
 
 
@@ -200,53 +206,64 @@ File name
 
 
 
+========== Tabs ==========
+tabe[dit] filename    opens filename in a new tab
+CTRL+W+T              Move current split window into its own tab
+tabc[lose]            Close the current tab page and all its windows
+tabo[nly]             Close all tabs apart from the current one
+
+tabmove 	          Move current tab to the end
+tabmove 0 	          Move current tab to the beginning
+tabmove 1 	          Move current tab to become the 2nd tab
+
+,tn		              New TAB [ ]
+,tc		              TAB Close [x]
+,t		              Next TAB ¯
+,w		              SAVE/WRITE
+:tab sball	          Opens a new tab for each open buffer
+
+,ba	                  Close ALL Buffers
+,bd	                  Close BUFFER
+
+gt	                  Next Tab
+gT	                  Previous Tab
+{i}gt                 go to tab in position i
+
+
 ========== Misc ========== 
 
-.	Repeat Command
-0p	Paste BOL
-$p	Paste EOL
+.	                Repeat Command
+0p	                Paste BOL
+$p	                Paste EOL
 
-CTRL+J	Window Down ̂
-CTRL+K	Window Up ^
+CTRL+J	            Window Down ̂
+CTRL+K	            Window Up ^
 
-CTRL+WW	Switch between Windows
+CTRL+WW	            Switch between Windows
 
-CTRL+WQ	Quit window
-CTRL+WV	Split Windows Vertical
-CTRL-W_ Minimize window
-CTRL-W| Maximize window
-CTRL-W+ Grow window
-CTRL-W- Shrink window
+CTRL+WQ	            Quit window
+CTRL+WV	            Split Windows Vertical
+CTRL-W_             Minimize window
+CTRL-W|             Maximize window
+CTRL-W+             Grow window
+CTRL-W-             Shrink window
 
-:bn	Next Buffer
-:bp	Previous Buffer
-:b #	Goto # Buffer. (eg. ':b 1' goto buffer 1)
-:b 	filename
+:bn	                Next Buffer
+:bp	                Previous Buffer
+:b #	            Goto # Buffer. (eg. ':b 1' goto buffer 1)
+:b filename
 
-,tn		New TAB [ ]
-,tc		TAB Close [x]
-,t		Next TAB ¯
-,w		SAVE/WRITE
-:tab sball	Opens a new tab for each open buffer
+,pp	                Toggle Paste Mode
+,cd	                Switch CWD to Dir of Open Buffer
 
-,ba	Close ALL Buffers
-,bd	Close BUFFER
+:r	                Read from file into buffer
+gf	                open file under cursor (or import statement)
+<c-w>f	            open in a new window (Ctrl-w f)
+<c-w>gf	            open in a new tab (Ctrl-w gf) 
 
-gt	Next Tab
-gT	Previous Tab
-{i}gt         go to tab in position i
-
-,pp	Toggle Paste Mode
-,cd	Switch CWD to Dir of Open Buffer
-
-:r	Read from file into buffer
-gf	open file under cursor (or import statement)
-<c-w>f	open in a new window (Ctrl-w f)
-<c-w>gf	open in a new tab (Ctrl-w gf) 
-
-,ss	Toggle Spellcheck
-,m	Remove Windows ^M encoding.
-,e	Reload vimrc
+,ss	                Toggle Spellcheck
+,m	                Remove Windows ^M encoding.
+,e	                Reload vimrc
 
 CTAGS
 # Generate tags (for goto definition, goto file, taglist) for PHP and template files (*.tpl)

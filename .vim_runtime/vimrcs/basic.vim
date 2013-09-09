@@ -219,7 +219,7 @@ map <F2> :previous<CR>
 " map F3 to open next buffer
 map <F3> :next<CR>
 " map F4 to open NERDTree
-map <F4> :NERDTreeToggle<CR>
+"map <F4> :NERDTreeToggle<CR>
 " map CTRL + d to quit
 nmap <C-d> :q!<CR>
 " map CTRL + d to quit (INSERT MODE)
