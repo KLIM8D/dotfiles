@@ -1,0 +1,16 @@
+gtk-icon-theme-name = "Elegant-AwOken"
+gtk-theme-name = "Dyne"
+gtk-toolbar-style = GTK_TOOLBAR_ICONS
+gtk-color-palette = "fg_color:#323232323232,bg_color:#d9d9d4d4cccc,text_color:#323232323232,base_color:#ffffffffffff,selected_fg_color:#ffffffffffff,selected_bg_color:#757564645b5b,tooltip_fg_color:#000000000000,tooltip_bg_color:#d5d5c1c1b6b6"
+gtk-font-name = "Droid Sans 9"
+style "no-resize-handle"
+{
+    GtkWindow::resize-grip-height = 0
+    GtkWindow::resize-grip-width = 0
+}
+style "vimfix" {
+  bg[NORMAL] = "#202020" # this matches my gvim theme 'Normal' bg color.
+}
+widget "vim-main-window.*GtkForm" style "vimfix"
+widget "gvim-main-window.*GtkForm" style "vimfix"
+class "GtkWidget" style "no-resize-handle"
