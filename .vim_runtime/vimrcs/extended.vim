@@ -34,11 +34,13 @@ if has("gui_macvim")
 endif
 
 " Disable scrollbars (real hackers don't use scrollbars for navigation!)
-"set guioptions-=r
-"set guioptions-=R
+set guioptions-=r
+set guioptions-=R
 set guioptions-=l
 set guioptions-=L
-
+set guioptions-=m
+set guioptions-=b
+set guioptions-=h
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Fast editing and reloading of vimrc configs

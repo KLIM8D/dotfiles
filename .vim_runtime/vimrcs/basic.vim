@@ -70,11 +70,11 @@ set number
 set nowrap
 
 " windows height
-set lines=75
+"set lines=75
 " window width
-set columns=130
+"set columns=130
 "window position
-winpos 75 50
+"winpos 75 50
 
 " run the Flake8 check every time you write a Python file
 autocmd BufWritePost *.py call Flake8()
@@ -239,9 +239,11 @@ map <silent><A-Right> :tabnext<CR>
 " map Alt-LeftArrow to jump to the previous tab
 map <silent><A-Left> :tabprevious<CR>
 " Paste
-nmap <C-V> "+gP
+set pastetoggle=<F10>
+inoremap <C-v> <F10><C-r>+<F10>
+"nmap <C-V> "+gP
 " Paste (INSERT MODE)
-imap <C-V> <ESC><C-V>i
+"imap <C-V> <ESC><C-V>i
 " Copy
 vmap <C-C> "+y
 " Escape insert mode
