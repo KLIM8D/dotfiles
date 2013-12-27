@@ -1,0 +1,160 @@
+# Account info ---------------------------------------
+set my_name   = "Morten Klim Sørensen"
+set imap_user = "mail@kl1m.dk"
+set realname  = "Morten Klim Sørensen"
+set from      = "mail@kl1m.dk"
+set use_from  = yes
+set signature = "~/.mutt/signature"
+
+# Paths ----------------------------------------------
+set folder           = imaps://imap.gmail.com/
+set alias_file       = ~/.mutt/alias         # where to store aliases
+set header_cache     = ~/.mutt/cache/headers # where to store headers
+set message_cachedir = ~/.mutt/cache/bodies  # where to store bodies
+set certificate_file = ~/.mutt/certificates  # where to store certs
+set mailcap_path     = ~/.mutt/mailcap       # entries for filetypes
+set tmpdir           = ~/.mutt/temp          # where to keep temp files
+
+# Basic Options --------------------------------------
+set spoolfile        = +INBOX
+set editor           = "gvim -f"
+set wait_key         = no                    # shut up, mutt
+set mbox_type        = Maildir               # mailbox type
+set timeout          = 3                     # idle time before scanning
+set mail_check       = 0                     # minimum time between scans
+set imap_peek        = no                    # Gmail mark as read
+unset move                                   # gmail does that
+set text_flowed      = yes                   # no hard breaks in quoted text
+set delete           = ask-yes                               
+unset confirmappend                          # don't ask, just do!
+set quit             = ask-yes                                
+unset mark_old                               # read/new is good enough for me
+set beep_new                                 # bell on new mails
+set pipe_decode                              # strip headers and eval mimes when piping
+set thorough_search                          # strip headers and eval mimes before searching
+set edit_headers                             # put headers in editor when composing messages
+set fast_reply                               # skip to compose when replying
+set envelope_from                            # which from?
+set sig_dashes                               # dashes before my sig... sweet
+set fcc_attach                               # save attachments with the body
+set mime_forward                             # forward attachments as part of body
+set mime_forward_rest                        # include attachments
+set forward_format   = "Fwd: %s"             # format for subject when forwarding
+set forward_decode                           # decode when forwarding
+set attribution      = "On %d, %n wrote:"    # set the attribution
+set include                                  # include message in replies
+set forward_quote                            # include message in forwards
+
+# Specify where to save and/or look for postponed messages.
+set postponed = +[Gmail]/Kladder
+# Allow Mutt to open new imap connection automatically.
+unset imap_passive
+# Keep IMAP connection alive by polling intermittently (time in seconds).
+set imap_keepalive = 300
+# How often to check for new mail (time in seconds).
+set mail_check = 120
+# activate TLS if available on the server
+set ssl_starttls=yes
+# always use SSL when connecting to a server
+set ssl_force_tls=yes
+# Automatically poll subscribed mailboxes for new mail (new in 1.5.11)
+#set imap_check_subscribed
+# Mailboxes to show in the sidebar.
+mailboxes +INBOX +[Gmail]/"Sendte e-mails" +[Gmail]/Kladder
+mailboxes +Arbejde +Arbejde/Løn +Arbejde/OrderStatusMails +Arbejde/Timesedler
+mailboxes +KidsLink +KidsLink/Løn +KidsLink/Timesedler
+mailboxes +"Arch Announce" +"Arch General"
+
+# And poll the current mailbox more often (not needed with IDLE in post 1.5.11)
+set timeout=10
+# Display download progress every 5K
+set net_inc=5
+set smtp_url="smtp://mail@kl1m.dk@smtp.gmail.com:587/"
+
+# Mailing lists
+lists arch-announce@archlinux.org                                # Arch announcements
+subscribe arch-announce@archlinux.org
+
+lists arch-general@archlinux.org                                 # Arch general list
+subscribe arch-general@archlinux.org
+
+# HTML mails -----------------------------------------
+auto_view text/html
+alternative_order text/plain text/html
+macro attach \cv "<pipe-entry>cat >~/.mutt/cache/mail.html && $BROWSER ~/.mutt/cache/mail.html && rm ~/.mutt/cache/mail.html<enter>"
+
+# Index View Options ---------------------------------
+set date_format = "%m/%d"
+set index_format = "[%Z]  %D  %-20.20F  %s"
+set sort = threads                         # like gmail
+set sort_aux = reverse-last-date-received  # like gmail
+set uncollapse_jump                        # don't collapse on an unread message
+set sort_re                                # thread based on regex
+set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
+
+# Pager View Options ---------------------------------
+set pager_index_lines = 10 # number of index lines to show
+set pager_context = 3      # number of context lines to show
+set pager_stop             # don't go to next message automatically
+set menu_scroll            # scroll in menus
+set tilde                  # show tildes like in vim
+unset markers              # no ugly plus signs
+
+set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+alternative_order text/plain text/enriched text/html
+
+# Pager Key Bindings ---------------------------------
+bind pager k  previous-line
+bind pager j  next-line
+bind pager gg top
+bind pager G  bottom
+
+bind pager R  group-reply
+
+# View attachments properly.
+bind attach <return> view-mailcap
+macro attach s <save-entry><bol>/home/klim/attachments/ "directory to save attachments"
+
+# Sidebar Patch --------------------------------------
+set sidebar_delim   = ' │'
+set sidebar_visible = yes
+set sidebar_width   = 34
+set sidebar_sort = yes
+color sidebar_new yellow default
+macro index b '<enter-command>toggle sidebar_visible<enter><refresh>'
+macro pager b '<enter-command>toggle sidebar_visible<enter><redraw-screen>'
+
+# Ctrl-n, Ctrl-p to select next, previous folder.
+# Ctrl-o to open selected folder.
+bind index,pager \CP sidebar-prev
+bind index,pager \CN sidebar-next
+bind index,pager \CO sidebar-open
+
+# Status Bar -----------------------------------------
+# formats
+set date_format         = "%d. %b %Y %H:%M"
+set index_format        = "%3C  [%S]   %D  •  %-25.25L %s %> %c"
+set pager_format        = "Reading message %C of %m %> %lL [%P]" # pager statusbar
+set folder_format       = "%2C %t %N %8s %d %f"                  # mailbox list view
+#set status_format       = " %?M?%M/?%m Mails %?n?%n new, ?%?u?%u unread, ?%?p?%p drafts, ?%?t?%t +tagged, ?%?d?%d deleted, ?[%f %l]  %?b?%b unread messages. ?%>  %V  [%P]"
+set alias_format        = "%4n %t %-20a  %r"
+
+set status_chars  = " *%A"
+set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?─── %V [%P]"
+
+# Header Options -------------------------------------
+ignore *                                # ignore all headers
+unignore from: to: cc: date: subject:   # show only these
+unhdr_order *                           # some distros order things by default
+hdr_order from: to: cc: date: subject:  # and in this order
+
+# Abook ----------------------------------------------
+set query_command= "abook --mutt-query '%s'"
+macro index,pager  a "<pipe-message>abook --add-email-quiet<return>" "Add this sender to Abook"
+bind editor        <Tab> complete-query
+macro generic,index,pager \ca "<shell-escape>abook<return>" "launch abook"
+
+# Colors ---------------------------------------------
+#source ~/mutt-colors-solarized-light-16.muttrc
+source ~/.mutt/colors.muttrc
+#source ~/mutt-colors-solarized-template.muttrc
