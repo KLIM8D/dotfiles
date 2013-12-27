@@ -281,6 +281,8 @@ gf	                open file under cursor (or import statement)
 ,m	                Remove Windows ^M encoding.
 ,e	                Reload vimrc
 
+digraphs            Display all non-ascii charset, with keybinds
+
 CTAGS
 # Generate tags (for goto definition, goto file, taglist) for PHP and template files (*.tpl)
 ctags -R --languages=php --langmap=PHP:+.tpl .

@@ -175,3 +175,61 @@ autocmd BufWritePost *.py :silent! :TlistUpdate
 map <F8> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Upload selection to Uplio
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" Visual Range (Selection)
+function! GetVisual()
+        let reg_save = getreg('"') 
+        let regtype_save = getregtype('"') 
+        let cb_save = &clipboard 
+        set clipboard& 
+        normal! ""gvy 
+        let selection = getreg('"') 
+        call setreg('"', reg_save, regtype_save) 
+        let &clipboard = cb_save 
+        return selection 
+endfunction 
+
+function! Visual_Uplio()
+        let try=GetVisual()
+        "" FIXME Refactor this
+        let expandy = expand('%:e')
+        let buf_fname = expand('%:t')
+        let buf_ft = &filetype
+        new
+        put =try
+        """ TODO: Need filetype extension (&filetype)
+        if expandy == ""
+            execute 'w! /tmp/'.buf_fname.".".buf_ft
+        else
+            execute 'w! /tmp/'.buf_fname
+        endif
+        ""write! /tmp/%:t:r (OLD AND WORKED)
+        bdelete!
+        ""close (bdelete takes care of business)
+        "" TODO: Buffer filename for file in tmp
+        let sh_out = system('curl -s -F file=@/tmp/'.(expandy=="" ? buf_fname.".".buf_ft : buf_fname).' key=n3g7ui1z28o71ikbthni8k1asgj2614j http://upl.io | xclip -selection clipboard')
+        ""echom uplio_out
+endfunction
+vnoremap UU y:call Visual_Uplio()<Enter>
+"" TODO Make Normal_Uplio upload with nnoremap UU
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => UltiSnips
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:UltiSnipsSnippetsDir = '~/.vim_runtime/sources_non_forked/ultisnips/UltiSnips'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => UltiSnips
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:multi_cursor_use_default_mapping = 0
+" Default mapping
+let g:multi_cursor_next_key = '<C-n>'
+let g:multi_cursor_prev_key = '<C-p>'
+let g:multi_cursor_skip_key = '<C-x>'
+let g:multi_cursor_quit_key = '<Esc>'
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
