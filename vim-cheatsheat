@@ -49,66 +49,66 @@ CTRL-I	Next location (cursor)
 
 ========== Change ==========
 
-I 	    INSERT (at beginning)
-A 	    INSERT (at end)
+I               INSERT (at beginning)
+A               INSERT (at end)
 
-ci}	    Change inside brackets
-vi}	    Select inside brackets
+ci}             Change inside brackets
+vi}             Select inside brackets
 
-dgg 	Delete to top
-dG 	    Delete to bottom 	
+dgg             Delete to top
+dG              Delete to bottom 	
 
-d^	    Delete to start of line
-D	    Delete to end of line (or d$)
-dt;	    Delete until ;
+d^              Delete to start of line
+D               Delete to end of line (or d$)
+dt;             Delete until ;
 
-d} 	    Delete next p-graph 	
-d{ 	    Delete previous p-graph
+d}              Delete next p-graph 	
+d{              Delete previous p-graph
 
-j	    Join line to Above
-J	    Join line to below
+j               Join line to Above
+J               Join line to below
 
-cc	    Replace Line
-S	    Replace Line
+cc              Replace Line
+S               Replace Line
 
-s	    Replace Letter (Delete then Insert Mode)
-cw	    Replace word
-c$	    Replace to EOL
+s               Replace Letter (Delete then Insert Mode)
+cw              Replace word
+c$              Replace to EOL
 
-deep	Swap two words in front of cursor (Cursor on empty space)
-ddp	    Swap two lines
+deep            Swap two words in front of cursor (Cursor on empty space)
+ddp             Swap two lines
 
-g-	    Undo Change
-u	    Undo Change
-g+	    Redo Change
-CTRL+R	Redo Change
+g-              Undo Change
+u               Undo Change
+g+              Redo Change
+CTRL+R          Redo Change
 
-y	    Copy marked text
-Y	    Copy/Yank whole line
-y$	    Copy/Yank whole line
-2yy	    Copy 2 lines
-yw	    Copy word
+y               Copy marked text
+Y               Copy/Yank whole line
+y$              Copy/Yank whole line
+2yy             Copy 2 lines
+yw              Copy word
 
-ALT+j	Move current line UP
-ALT+k	Move current line DOWN
+ALT+j           Move current line UP
+ALT+k           Move current line DOWN
 
-CTRL-6	Switch between open buffers
-ggVG	Select All
-ggvG=	Auto-indenting
+CTRL-6          Switch between open buffers
+ggVG            Select All
+ggvG=           Auto-indenting
 
-x	    Delete current character
+x               Delete current character
 
-CTRL+A	Increment a Number
-
-
+<numb>CTRL+A    Increment number by <numb>
+CTRL+A	        Increment a number
+CTRL+X          Decrement a number
 
 
 ========== Macro ==========
 
 q	        Record Macro
-qa	        Run macro (a)
+q<key>	    Record macro and place it on <key>
+@<key>      Run macro at <key>
 3@q	        Run macro 3 times
-
 
 
 ========== Navigation/Files ==========
@@ -281,8 +281,6 @@ gf	                open file under cursor (or import statement)
 ,m	                Remove Windows ^M encoding.
 ,e	                Reload vimrc
 
-digraphs            Display all non-ascii charset, with keybinds
-
 CTAGS
 # Generate tags (for goto definition, goto file, taglist) for PHP and template files (*.tpl)
 ctags -R --languages=php --langmap=PHP:+.tpl .
@@ -290,3 +288,8 @@ ctags -R --languages=php --langmap=PHP:+.tpl --tag-relative=yes --PHP-kinds=+cf 
 
 Syntax hightlighting
 setf LANG (replace LANG, ex. setf C)
+
+digraphs            Display all non-ascii characters, with keybindings
+
+Prettify JSON (split one line, to N)
+%!python -m json.tool

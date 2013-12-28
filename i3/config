@@ -74,7 +74,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+Shift+s layout stacking
+bindsym $mod+Shift+Alt+s layout stacking
 bindsym $mod+Shift+w layout tabbed
 bindsym $mod+Shift+e layout toggle split
 
@@ -101,6 +101,9 @@ bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
+bindsym $mod+s workspace Skype
+bindsym $mod+m workspace Mail
+bindsym $mod+n workspace Music
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -113,17 +116,15 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
-bindsym $mod+s workspace Skype
-bindsym $mod+m workspace Mail
-bindsym $mod+n workspace Music
+bindsym $mod+Shift+s move container to workspace Skype
+bindsym $mod+Shift+m move container to workspace Mail
+bindsym $mod+Shift+n move container to workspace Music
 
 #Window Control
 
-for_window [title="Skype"] move workspace Skype; floating enable
+for_window [title="Skype"] floating enable
 for_window [title="xfreerdp"] floating enable
-for_window [title="mutt"] move workspace Mail; workspace Mail
-for_window [title="ncmpcpp"] move workspace Music; workspace Music
-for_window [title="ncmpc"] move workspace Music; workspace Music
+
 # colors
  
 # class                 border  backgr.    text
@@ -226,5 +227,6 @@ bindsym XF86AudioNext exec mpc next
 bindsym XF86AudioRaiseVolume exec mpc volume +1
 bindsym XF86AudioLowerVolume exec mpc volume -1
 bindsym XF86AudioRewind exec mpc random
-exec --no-startup-id $HOME/Scripts/wallpaper 
+exec --no-startup-id $HOME/.fehbg
+exec --no-startup-id numlockx on
 exec --no-startup-id i3-msg 'workspace Mail; exec urxvt -name Mail -e /usr/bin/mutt'
