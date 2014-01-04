@@ -18,6 +18,7 @@ Cut & paste:
 5. Move to where you would like to paste.
 6. Press P to paste before the cursor, or p to paste after. 
 
+
 ========== Navigation ==========
 
 1/2 ½	BOL (Begin-of-line)
@@ -44,7 +45,6 @@ CTRL-I	Next location (cursor)
 #	    Previous word
 
 %	    on brackets {} () [] will find the matching one.
-
 
 
 ========== Change ==========
@@ -83,6 +83,8 @@ u               Undo Change
 g+              Redo Change
 CTRL+R          Redo Change
 
+R               Overwrite/Replace mode (shift+r in normal mode)
+
 y               Copy marked text
 Y               Copy/Yank whole line
 y$              Copy/Yank whole line
@@ -92,11 +94,12 @@ yw              Copy word
 ALT+j           Move current line UP
 ALT+k           Move current line DOWN
 
-CTRL-6          Switch between open buffers
 ggVG            Select All
-ggvG=           Auto-indenting
+gg=G            Automatically indent code beautifully on whole file
+=               Fix indentation on selected area
 
 x               Delete current character
+d<numb>w        Delete (opt. numb) next word after cursor
 
 <numb>CTRL+A    Increment number by <numb>
 CTRL+A	        Increment a number
@@ -127,6 +130,7 @@ CTRL + w; SHIFT + L     Rearrange window, to far right (move window right)
 CTRL + w; SHIFT + H     Rearrange window, to far left (move window left)
 CTRL + W + R            Rotate window
 
+
 ========== Visual commands ========== 
 >	Indent Right
 <	Indent Left
@@ -141,6 +145,7 @@ Mark the lines you want to edit
 Hit Shift + I
 Do your modifications
 Hit ESC
+
 
 ========== Search / Replace ==========
 
@@ -165,7 +170,6 @@ N			        Previous Search
 :ab mail mail@provider.org 	Define mail as abbreviation of mail@provider.org
 
 
-
 ========== Folding ========== 
 
 za		Toggle folding
@@ -186,18 +190,13 @@ zo		Open one or count folds
 z0		Open all folds under the cursor
 
 
-
 ========== Plugins / Extensions ========== 
 
 ,f		     Most Recent Files (MRU)
-,j		     PeepOpen
-,nn		     NERDTree Toogle
-,nb		     NERDTree From Bookmark
-,nf		     NERDTree Find
 ,o		     BufExplorer
+CTRL+b+e     CTRLF
 CTRL-j		 Trigger snippet
 CTRL+TAB	 See all available snippets
-
 
 
 ========== Marks ========== 
@@ -205,7 +204,6 @@ CTRL+TAB	 See all available snippets
 m+[A-Z]		marks the current line with an alias of the key pressed.
 '[A-Z]		goes to this mark.
 http://vim.wikia.com/wiki/Using_marks
-
 
 
 ========== Tricks ========== 
@@ -219,7 +217,6 @@ Absolute Path
 :set tabline=%{expand('%:p')}
 File name
 :set tabline=%{expand('%:t')}
-
 
 
 ========== Tabs ==========
@@ -247,7 +244,6 @@ gT	                  Previous Tab
 
 
 ========== Misc ========== 
-
 .	                Repeat Command
 0p	                Paste BOL
 $p	                Paste EOL
@@ -277,7 +273,7 @@ gf	                open file under cursor (or import statement)
 <c-w>f	            open in a new window (Ctrl-w f)
 <c-w>gf	            open in a new tab (Ctrl-w gf) 
 
-,ss	                Toggle Spellcheck
+,ss	                Toggle spellcheck equivalent to set spell
 ,m	                Remove Windows ^M encoding.
 ,e	                Reload vimrc
 
