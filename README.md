@@ -8,3 +8,5 @@ config files for bash, vim, weechat, openbox, tint2, conky, Sublime Text 2 & Int
 ![Screenshot 2](https://raw.github.com/KLIM8D/dotfiles/master/screenshot2.png)
 ![Screenshot 3](https://raw.github.com/KLIM8D/dotfiles/master/screenshot3.png)
 ![Screenshot 4](https://raw.github.com/KLIM8D/dotfiles/master/screenshot4.png)
+i3 statusbar:
+![Screenshot 5](https://raw.github.com/KLIM8D/dotfiles/master/i3/i3-statusbar.png)
