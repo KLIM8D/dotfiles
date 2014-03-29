@@ -1,3 +1,18 @@
 [submodule ".vim_runtime/sources_non_forked/vim-jedi"]
 	path = .vim_runtime/sources_non_forked/vim-jedi
 	url = git@github.com:davidhalter/jedi-vim.git
+[submodule ".vim_runtime/sources_non_forked/neocomplete"]
+	path = .vim_runtime/sources_non_forked/neocomplete
+	url = git@github.com:Shougo/neocomplete.vim.git
+[submodule ".vim_runtime/sources_non_forked/syntastic"]
+	path = .vim_runtime/sources_non_forked/syntastic
+	url = git@github.com:scrooloose/syntastic.git
+[submodule ".vim_runtime/sources_non_forked/ultisnips"]
+	path = .vim_runtime/sources_non_forked/ultisnips
+	url = git@github.com:SirVer/ultisnips.git
+[submodule ".vim_runtime/sources_non_forked/vim-multiple-cursors"]
+	path = .vim_runtime/sources_non_forked/vim-multiple-cursors
+	url = git@github.com:terryma/vim-multiple-cursors.git
+[submodule ".vim_runtime/sources_non_forked/yankring"]
+	path = .vim_runtime/sources_non_forked/yankring
+	url = git@github.com:vim-scripts/YankRing.vim.git
