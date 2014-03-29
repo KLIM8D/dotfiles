@@ -69,13 +69,6 @@ set number
 " stop lines from wrapping
 set nowrap
 
-" windows height
-"set lines=75
-" window width
-"set columns=130
-"window position
-"winpos 75 50
-
 " run the Flake8 check every time you write a Python file
 autocmd BufWritePost *.py call Flake8()
 
@@ -218,8 +211,6 @@ set wrap "Wrap lines
 map <F2> :previous<CR>
 " map F3 to open next buffer
 map <F3> :next<CR>
-" map F4 to open NERDTree
-"map <F4> :NERDTreeToggle<CR>
 " map CTRL + d to quit
 nmap <C-d> :q!<CR>
 " map CTRL + d to quit (INSERT MODE)
