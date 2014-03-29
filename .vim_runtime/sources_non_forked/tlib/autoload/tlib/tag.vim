@@ -3,13 +3,30 @@
 " @Website:     http://www.vim.org/account/profile.php?user_id=4037
 " @License:     GPL (see http://www.gnu.org/licenses/gpl.txt)
 " @Created:     2007-11-01.
-" @Last Change: 2011-03-10.
-" @Revision:    0.0.53
+" @Last Change: 2013-09-25.
+" @Revision:    0.0.58
 
 if &cp || exists("loaded_tlib_tag_autoload")
     finish
 endif
 let loaded_tlib_tag_autoload = 1
+
+
+" Extra tags for |tlib#tag#Retrieve()| (see there). Can also be buffer-local.
+TLet g:tlib_tags_extra = ''
+
+" Filter the tag description through |substitute()| for these filetypes. 
+" This applies only if the tag cmd field (see |taglist()|) is used.
+" :nodefault:
+TLet g:tlib_tag_substitute = {
+            \ 'java': [['\s*{\s*$', '', '']],
+            \ 'ruby': [['\<\(def\|class\|module\)\>\s\+', '', '']],
+            \ 'vim':  [
+            \   ['^\s*com\%[mand]!\?\(\s\+-\S\+\)*\s*\u\w*\zs.*$', '', ''],
+            \   ['^\s*\(let\|aug\%[roup]\|fu\%[nction]!\?\|com\%[mand]!\?\(\s\+-\S\+\)*\)\s*', '', ''],
+            \   ['"\?\s*{{{\d.*$', '', ''],
+            \ ],
+            \ }
 
 
 " :def: function! tlib#tag#Retrieve(rx, ?extra_tags=0)
@@ -38,6 +55,7 @@ let loaded_tlib_tag_autoload = 1
 " <    tags from the JDK will be included.
 function! tlib#tag#Retrieve(rx, ...) "{{{3
     TVarArg ['extra_tags', 0]
+    " TLogVAR a:rx, extra_tags
     if extra_tags
         let tags_orig = &l:tags
         if empty(tags_orig)

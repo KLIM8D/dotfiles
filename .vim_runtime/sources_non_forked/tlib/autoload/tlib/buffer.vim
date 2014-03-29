@@ -3,8 +3,13 @@
 " @Website:     http://www.vim.org/account/profile.php?user_id=4037
 " @License:     GPL (see http://www.gnu.org/licenses/gpl.txt)
 " @Created:     2007-06-30.
-" @Last Change: 2010-09-23.
-" @Revision:    0.0.334
+" @Last Change: 2013-09-25.
+" @Revision:    0.0.352
+
+
+" Where to display the line when using |tlib#buffer#ViewLine|.
+" For possible values for position see |scroll-cursor|.
+TLet g:tlib_viewline_position = 'zz'
 
 
 let s:bmru = []
@@ -351,6 +356,7 @@ function! tlib#buffer#InsertText(text, ...) "{{{3
             exec 'norm! '. posshift .'h'
         endif
     endif
+    " TLogDBG getline(lineno)
     " TLogDBG string(getline(1, '$'))
     return grow
 endf
