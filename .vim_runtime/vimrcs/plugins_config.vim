@@ -239,4 +239,3 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Go-lang
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set runtimepath+=$HOME/.vim_runtime/sources_non_forked/vim-golang
