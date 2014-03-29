@@ -16,3 +16,9 @@
 [submodule ".vim_runtime/sources_non_forked/yankring"]
 	path = .vim_runtime/sources_non_forked/yankring
 	url = git@github.com:vim-scripts/YankRing.vim.git
+[submodule ".vim_runtime/sources_non_forked/vim-godef"]
+	path = .vim_runtime/sources_non_forked/vim-godef
+	url = git@github.com:dgryski/vim-godef.git
+[submodule ".vim_runtime/sources_non_forked/vim-golang"]
+	path = .vim_runtime/sources_non_forked/vim-golang
+	url = git@github.com:jnwhiteh/vim-golang.git

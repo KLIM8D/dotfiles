@@ -235,3 +235,8 @@ let g:UltiSnipsExpandTrigger="<C-CR>"
 let g:UltiSnipsJumpForwardTrigger="<C-tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Go-lang
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set runtimepath+=$HOME/.vim_runtime/sources_non_forked/vim-golang
