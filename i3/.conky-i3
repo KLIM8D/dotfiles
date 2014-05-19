@@ -7,15 +7,18 @@ max_text_width 0
 TEXT
 [\
 #BTC:
-{"full_text":"Now","color":"\#888888","separator":false,"separator_block_width":6},\
-{"full_text":"${execpi 600 ~/workspace/python/btcprices.py price}","color":"\#EEEEEE","separator":false},\
-{"full_text":"High","color":"\#888888","separator":false,"separator_block_width":6},\
-{"full_text":"${execpi 1200 ~/workspace/python/btcprices.py high}","color":"\#AAF096","separator":false},\
-{"full_text":"Low","color":"\#888888","separator":false,"separator_block_width":6},\
-{"full_text":"${execpi 1300 ~/workspace/python/btcprices.py low}","color":"\#FF3333","separator":false},\
-{"full_text":"Vol","color":"\#888888","separator":false,"separator_block_width":6},\
-{"full_text":"${execpi 1400 ~/workspace/python/btcprices.py vol}","color":"\#F0DC64","separator":false},\
-
+${execpi 60 python ~/workspace/python/btcprices-new.py price}\
+#{"full_text":"Now","color":"\#888888","separator":false,"separator_block_width":6},\
+#{"full_text":"${execpi 600 ~/workspace/python/btcprices.py price}","color":"\#EEEEEE","separator":false},\
+#{"full_text":"High","color":"\#888888","separator":false,"separator_block_width":6},\
+#{"full_text":"${execpi 1200 ~/workspace/python/btcprices.py high}","color":"\#AAF096","separator":false},\
+#{"full_text":"Low","color":"\#888888","separator":false,"separator_block_width":6},\
+#{"full_text":"${execpi 1300 ~/workspace/python/btcprices.py low}","color":"\#FF3333","separator":false},\
+#{"full_text":"Vol","color":"\#888888","separator":false,"separator_block_width":6},\
+#{"full_text":"${execpi 1400 ~/workspace/python/btcprices.py vol}","color":"\#F0DC64","separator":false},\
+\
+\
+\
 # Uptime:
 {"full_text":"UPTIME","color":"\#888888","separator":false,"separator_block_width":6},\
 {"full_text":"${uptime_short}","color":"\#EEEEEE","separator":false},\
@@ -23,17 +26,17 @@ TEXT
 #Battery:
 {"full_text":"BATTERY","color":"\#888888","separator":false,
 "separator_block_width":6},\
-{"full_text":"${battery_percent}%","color":"\#EEEEEE","separator":false},\
+{"full_text":"${battery BAT1}%","color":"\#EEEEEE","separator":false},\
 
 # Memory:
 {"full_text":"MEM","color":"\#888888","separator":false,"separator_block_width":6},\
-{"full_text":"${if_match ${memperc}<30}${mem}/${memmax}","color":"\#AAF096","separator":false,"separator_block_width":6},\
+{"full_text":"${if_match ${memperc}<30}${mem}","color":"\#AAF096","separator":false,"separator_block_width":6},\
 {"full_text":"${else}"},\
-{"full_text":"${if_match ${memperc}<60}${mem}/${memmax}","color":"\#F0DC64","separator":false,"separator_block_width":6},\
+{"full_text":"${if_match ${memperc}<60}${mem}","color":"\#F0DC64","separator":false,"separator_block_width":6},\
 {"full_text":"${else}"},\
-{"full_text":"${if_match ${memperc}<85}${mem}/${memmax}","color":"\#FF9933","separator":false,"separator_block_width":6},\
+{"full_text":"${if_match ${memperc}<85}${mem}","color":"\#FF9933","separator":false,"separator_block_width":6},\
 {"full_text":"${else}"},\
-{"full_text":"${if_match ${memperc}>=85}${mem}/${memmax}","color":"\#FF3333","separator":false,"separator_block_width":6},Ò\
+{"full_text":"${if_match ${memperc}>=85}${mem}","color":"\#FF3333","separator":false,"separator_block_width":6},Ò\
 {"full_text":"${endif}${endif}${endif}${endif}"},\
 
 # CPU:

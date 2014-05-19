@@ -1,0 +1,31 @@
+#!/bin/bash
+
+SSID="GetYourOwnWifi"
+
+ISNETUP=$(wicd-cli -yd | \grep $SSID | tr -s ' ' | cut -f 2 -d ' ') 2>/dev/null
+if [[ "$1" == "kill" ]]; then
+    echo "Killing mpd.."
+    mpd --kill
+    killall mpdscribble
+else
+if [[ "$ISNETUP" == *"$SSID"* ]]; then
+    ps cax | grep -w mpd > /dev/null
+    if [ $? -eq 1 ]; then
+        echo "Starting mpd"
+        mpd
+        #ps cax | grep -w mpdscribble > /dev/null
+        #if [ $? -eq 1 ]; then
+            #echo "Starting mpdscribble"
+            #mpdscribble
+        #fi
+    fi
+    [ -t 0 ] && terminal=1
+    if [ $terminal ]; then
+        ncmpcpp
+    else
+        urxvt -e ncmpcpp
+    fi
+else
+    echo "NFS outside range"
+fi
+fi

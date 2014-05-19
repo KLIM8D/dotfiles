@@ -1,3 +1,9 @@
+Xft.antialias: true
+Xft.rgba: rgb
+Xft.hinting: true
+Xft.hintstyle: hintfull
+Xcursor.theme: neutral
+Xcursor.size: 48
 ! URxvt
 URxvt*termName: rxvt
 !URxvt*background:  #2E2E2E
@@ -9,8 +15,12 @@ URxvt*inheritPixmap:	false
 URxvt*urgentOnBell: true
 URxvt*geometry:		90x24
 URxvt*tint:		white
-URxvt.font: xft:DejaVu Sans Mono:pixelsize=12
+!#URxvt.font: xft:DejaVu Sans Mono:pixelsize=12
+!#URxvt.font: xft:Monospace:pixelsize=24
+URxvt.font: xft:Droid Sans Mono for Powerline:pixelsize=22
 URxvt.buffered: true
 
 ! -- Colours -- !
 #include "/home/klim/.colors/custom"
+
+*dpi	168
