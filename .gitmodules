@@ -25,3 +25,6 @@
 [submodule ".vim_runtime/sources_non_forked/vim-gitgutter"]
 	path = .vim_runtime/sources_non_forked/vim-gitgutter
 	url = git://github.com/airblade/vim-gitgutter.git
+[submodule ".vim_runtime/sources_non_forked/nerdcommenter"]
+	path = .vim_runtime/sources_non_forked/nerdcommenter
+	url = git@github.com:scrooloose/nerdcommenter.git

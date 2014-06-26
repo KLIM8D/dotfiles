@@ -1,0 +1,30 @@
+#!/bin/sh
+lock() {
+    i3lock -i /home/klim/Wallpapers/wide/5161779163_5c4c190e8f_o_small.png -t
+}
+
+case "$1" in
+    lock)
+        lock
+        ;;
+    logout)
+        i3-msg exit
+        ;;
+    suspend)
+        lock && systemctl suspend
+        ;;
+    hibernate)
+        lock && systemctl hibernate
+        ;;
+    reboot)
+        sudo shutdown -r now
+        ;;
+    shutdown)
+        sudo shutdown -h now
+        ;;
+    *)
+        echo "Usage: $0 {lock|logout|suspend|hibernate|reboot|shutdown}"
+        exit 2
+esac
+
+exit 0

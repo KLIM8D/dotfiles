@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#
+# Rotates GNOME Wallpaper using pictures in $FOLDER
+# Run in background: ./rotate.sh &
+# Make sure there are no spaces in picture filenames
+# http://ubuntu.online02.com/node/37
+#
+
+FOLDER="/home/klim/Wallpapers" # Change to your directory
+cd $FOLDER
+
+if [ -z "$1" ]
+then
+    NUMBER=$(ls -1 | wc -l)
+    RAN=$(($RANDOM%$NUMBER+1))
+    FILE=$(ls -1 | sed -n ${RAN}p)
+    echo $FILE
+    feh --bg-scale "$FOLDER/$FILE"
+else
+    feh --bg-scale "$1"
+fi
