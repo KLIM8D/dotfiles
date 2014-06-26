@@ -19,9 +19,7 @@ ${execpi 600 python ~/workspace/python/btcprices-new.py price}\
 #{"full_text":"${execpi 1300 ~/workspace/python/btcprices.py low}","color":"\#FF3333","separator":false},\
 #{"full_text":"Vol","color":"\#888888","separator":false,"separator_block_width":6},\
 #{"full_text":"${execpi 1400 ~/workspace/python/btcprices.py vol}","color":"\#F0DC64","separator":false},\
-\
-\
-\
+
 # Uptime:
 {"full_text":"UPTIME","color":"\#888888","separator":false,"separator_block_width":6},\
 {"full_text":"${uptime_short}","color":"\#EEEEEE","separator":false},\
@@ -29,7 +27,7 @@ ${execpi 600 python ~/workspace/python/btcprices-new.py price}\
 #Battery:
 {"full_text":"BATTERY","color":"\#888888","separator":false,
 "separator_block_width":6},\
-{"full_text":"${battery BAT1}%","color":"\#EEEEEE","separator":false},\
+{"full_text":"${battery BAT1}","color":"\#EEEEEE","separator":false},\
 
 # Memory:
 {"full_text":"MEM","color":"\#888888","separator":false,"separator_block_width":6},\
