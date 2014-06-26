@@ -11,12 +11,14 @@
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
-font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#font -misc-fixed-medium-r-normal--18-120-75-75-C-70-iso10646-1
 # The font above is very space-efficient, that is, it looks good, sharp and
 # clear in small sizes. However, if you need a lot of unicode glyphs or
 # right-to-left text rendering, you should instead use pango for rendering and
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
+font xft:Droid Sans Mono 9
+workspace_auto_back_and_forth yes
 
 set $mod Mod4
 
@@ -28,13 +30,13 @@ new_window pixel 1
 new_float pixel 1
 
 # start a terminal
-bindsym $mod+Shift+Return exec i3-sensible-terminal
+bindsym $mod+Shift+Return exec i3-sensible-terminal -fn 'xft:Liberation Mono for Powerline:pixelsize=22'
 
 # kill focused window
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+r exec --no-startup-id dmenu_run
+bindsym $mod+r exec --no-startup-id dmenu_run -fn 'Droid Sans Mono-9'
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -76,16 +78,16 @@ bindsym $mod+f fullscreen
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+Shift+Alt+s layout stacking
 bindsym $mod+Shift+w layout tabbed
-bindsym $mod+Shift+e layout toggle split
+bindsym $mod+space layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+#bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym Mod1+Tab focus parent
+bindsym Mod1+Tab focus right
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -102,8 +104,12 @@ bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 bindsym $mod+s workspace Skype
-bindsym $mod+m workspace Mail
-bindsym $mod+n workspace Music
+bindsym $mod+i workspace Irc
+bindsym $mod+m workspace Music
+
+#Switch between workspaces
+bindsym $mod+z workspace back_and_forth
+bindsym $mod+Shift+z move container to workspace back_and_forth
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -117,13 +123,23 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 bindsym $mod+Shift+s move container to workspace Skype
-bindsym $mod+Shift+m move container to workspace Mail
+bindsym $mod+Shift+m move container to workspace Irc 
 bindsym $mod+Shift+n move container to workspace Music
 
 #Window Control
 
 for_window [title="Skype"] floating enable
 for_window [title="xfreerdp"] floating enable
+for_window [class="File-roller|Lxappearance|Nitrogen|Arandr|Caffeine|Pavucontrol|emulator64-arm|Transmission-gtk|sublime-text"] floating enable
+for_window [title="Preferences|Xfce-notifyd|Skype|TrueCrypt|Catfish|Google Keep|Pocket|irssi"] floating enable
+for_window [title="File Operation Progress" class="Thunar"] floating enable
+for_window [title="Share a link on Twitter - Mozilla Firefox" class="Firefox"] floating enable
+for_window [title="Press This - Mozilla Firefox" class="Firefox"] floating enable
+# browser pop-ups
+for_window [window_role="pop-up"] floating enable,move absolute center
+
+assign [class="Skype"] Skype
+assign [class="Weechat"] Irc
 
 # colors
  
@@ -150,7 +166,7 @@ bar {
         position top
         mode dock
 #       font pango:fixed 6
-        font pango:Convergence 9px
+        #font pango:Convergence 9px
   colors {
         statusline      #999999
         background      #252525
@@ -218,15 +234,16 @@ mode "$mode_system" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+Pause mode "$mode_system"
+bindsym Control+$mod+Escape mode "$mode_system"
+bindsym XF86AudioMute exec sh ~/Scripts/pulseaudio-ctl mute 
 bindsym XF86Tools exec sh ~/Scripts/musicPlayer
 bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioStop exec mpc stop
 bindsym XF86AudioPrev exec mpc prev
 bindsym XF86AudioNext exec mpc next
-bindsym XF86AudioRaiseVolume exec mpc volume +1
-bindsym XF86AudioLowerVolume exec mpc volume -1
+bindsym XF86AudioRaiseVolume exec sh ~/Scripts/pulseaudio-ctl plus
+bindsym XF86AudioLowerVolume exec sh ~/Scripts/pulseaudio-ctl minus
 bindsym XF86AudioRewind exec mpc random
-exec --no-startup-id $HOME/.fehbg
-exec --no-startup-id numlockx on
-exec --no-startup-id i3-msg 'workspace Mail; exec urxvt -name Mail -e /usr/bin/mutt'
+exec --no-startup-id $HOME/Scripts/wallpaper
+#exec --no-startup-id $HOME/.fehbg
+#exec --no-startup-id i3-msg 'workspace Mail; exec urxvt -name Mail -e /usr/bin/mutt'

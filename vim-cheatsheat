@@ -154,6 +154,7 @@ Hit ESC
 ?       		    Backwards Search
 n			        Next Search ¯
 N			        Previous Search
+SHIFT+*             Search for word under cursor
 
 :bufdo /searchstr/	Search in all open files
 
@@ -218,6 +219,10 @@ Absolute Path
 File name
 :set tabline=%{expand('%:t')}
 
+/\t                Show all tabs:
+/\s\+$             Show trailing whitespace:
+/\(\S\+\)\@<=\s\+$ Show trailing whitespace only after some text (ignores empty lines):
+/ \+\ze\t          Show spaces before a tab
 
 ========== Tabs ==========
 tabe[dit] filename    opens filename in a new tab
@@ -276,6 +281,7 @@ gf	                open file under cursor (or import statement)
 ,ss	                Toggle spellcheck equivalent to set spell
 ,m	                Remove Windows ^M encoding.
 ,e	                Reload vimrc
+so $MYVIMRC         Reload vimrc
 
 CTAGS
 # Generate tags (for goto definition, goto file, taglist) for PHP and template files (*.tpl)
@@ -289,3 +295,45 @@ digraphs            Display all non-ascii characters, with keybindings
 
 Prettify JSON (split one line, to N)
 %!python -m json.tool
+
+
+======== Comments =========
+[count]<leader>cc |NERDComComment|
+Comment out the current line or text selected in visual mode.
+
+[count]<leader>cu |NERDComUncommentLine|
+Uncomments the selected line(s).
+
+[count]<leader>cn |NERDComNestedComment|
+Same as <leader>cc but forces nesting.
+
+[count]<leader>c |NERDComToggleComment|
+Toggles the comment state of the selected line(s). If the topmost selected line is commented, all selected lines are uncommented and vice versa.
+
+[count]<leader>cm |NERDComMinimalComment|
+Comments the given lines using only one set of multipart delimiters.
+
+[count]<leader>ci |NERDComInvertComment|
+Toggles the comment state of the selected line(s) individually.
+
+[count]<leader>cs |NERDComSexyComment|
+Comments out the selected lines ``sexily''
+
+[count]<leader>cy |NERDComYankComment|
+Same as <leader>cc except that the commented line(s) are yanked first.
+
+<leader>c$ |NERDComEOLComment|
+Comments the current line from the cursor to the end of line.
+
+<leader>cA |NERDComAppendComment|
+Adds comment delimiters to the end of line and goes into insert mode between them.
+
+|NERDComInsertComment|
+Adds comment delimiters at the current cursor position and inserts between. Disabled by default.
+
+<leader>ca |NERDComAltDelim|
+Switches to the alternative set of delimiters.
+
+[count]<leader>cl
+[count]<leader>cb |NERDComAlignedComment|
+Same as |NERDComComment| except that the delimiters are aligned down the left side (<leader>cl) or both sides (<leader>cb).
