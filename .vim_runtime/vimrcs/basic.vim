@@ -70,7 +70,7 @@ set number
 set nowrap
 
 " run the Flake8 check every time you write a Python file
-autocmd BufWritePost *.py call Flake8()
+"autocmd BufWritePost *.py call Flake8()
 
 set stal=2
 

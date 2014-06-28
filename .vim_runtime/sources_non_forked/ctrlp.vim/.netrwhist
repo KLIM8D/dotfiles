@@ -1,3 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/klim/workspace/go/src/github.com/RangelReale/osin'
+let g:netrw_dirhist_2='/home/klim/workspace/python'
+let g:netrw_dirhist_3='/home/klim/workspace/python/The Hard Way'
+let g:netrw_dirhist_4='/home/klim'
+let g:netrw_dirhist_5='/home/klim/workspace/python/The Hard Way'
+let g:netrw_dirhist_6='/home/klim/.vim_runtime/vimrcs'

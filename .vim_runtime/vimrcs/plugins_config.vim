@@ -193,4 +193,10 @@ let g:multi_cursor_quit_key = '<Esc>'
 let g:UltiSnipsExpandTrigger="<C-CR>"
 let g:UltiSnipsJumpForwardTrigger="<C-tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""'
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Syntastic
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_python_flake8_exec = 'flake8-python2'
