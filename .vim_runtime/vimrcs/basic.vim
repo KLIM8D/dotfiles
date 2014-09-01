@@ -227,8 +227,10 @@ map <C-n> :vnew<CR>
 map <C-e> :Explore<CR>
 " map Alt-RightArrow to jump to the next tab
 map <silent><A-Right> :tabnext<CR>
+map <silent><A-l> :tabnext<CR>
 " map Alt-LeftArrow to jump to the previous tab
 map <silent><A-Left> :tabprevious<CR>
+map <silent><A-h> :tabprevious<CR>
 " Paste
 set pastetoggle=<F10>
 inoremap <C-v> <F10><C-r>+<F10>

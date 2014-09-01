@@ -253,8 +253,10 @@ gT	                  Previous Tab
 0p	                Paste BOL
 $p	                Paste EOL
 
-CTRL+J	            Window Down ̂
-CTRL+K	            Window Up ^
+CTRL+w+H            Window left
+CTRL+w+L            Window Right
+CTRL+w+K            Window Up
+CTRL+w+J            Window Down
 
 CTRL+WW	            Switch between Windows
 
