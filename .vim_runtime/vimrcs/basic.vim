@@ -124,6 +124,7 @@ set magic
 
 " Show matching brackets when text indicator is over them
 set showmatch 
+
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
@@ -146,13 +147,6 @@ let g:syntastic_enable_signs=1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Enable syntax highlighting
 syntax enable 
-
-try
-    colorscheme desert
-catch
-endtry
-
-set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -249,7 +243,9 @@ imap <C-z> <ESC><C-z>i
 nmap <C-y> :redo<CR>
 " map CTRL + y to redo changes (INSERT MODE)
 imap <C-y> <ESC><C-y>i
-
+" Move 10 lines down
+map <C-j> 20j
+map <C-k> 20k
 
 "dragvisuals
 vmap <expr> <LEFT>  DVB_Drag('left')

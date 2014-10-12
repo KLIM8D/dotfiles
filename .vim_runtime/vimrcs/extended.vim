@@ -9,22 +9,18 @@
 " => GUI related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
-
-if has("gui_running")
-    colorscheme peaksea
-else
-    colorscheme ir_black
-endif
+set t_Co=256
+colorscheme mustang
 
 " Set font according to system
-if has("mac") || has("macunix")
-    set gfn=Menlo:h14
-    set shell=/bin/bash
-elseif has("win16") || has("win32")
+"if has("mac") || has("macunix")
+"    set gfn=Menlo:h14
+"    set shell=/bin/bash
+if has("win16") || has("win32")
     set gfn=Bitstream\ Vera\ Sans\ Mono:h10
-elseif has("linux")
+else
     set gfn=Monospace\ 10
-    set shell=/bin/bash
+    set shell=/bin/zsh
 endif
 
 " Open MacVim in fullscreen mode
@@ -65,7 +61,7 @@ endtry
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Smart mappings on the command line
 cno $h e ~/
-cno $d e ~/Desktop/
+cno $d e ~/workspace/
 cno $j e ./
 cno $c e <C-\>eCurrentFileDir("e")<cr>
 

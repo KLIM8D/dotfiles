@@ -116,21 +116,16 @@ let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Ctags & Taglist
+" => Ctags & Tagbar
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" set places to look for tag files.
-set tags=./tags,./src/tags,./../tags,/dev/common/src/tags
-
-let Tlist_Ctags_Cmd = "/usr/bin/ctags"
-let Tlist_WinWidth = 50
-noremap <silent> <F4> :TlistToggle<CR><C-W>h
+noremap <silent> <F4> :Tagbar<CR><C-W>l
 
 " Update TagList at every save for theese filetypes
-autocmd BufWritePost *.c :silent! :TlistUpdate
-autocmd BufWritePost *.py :silent! :TlistUpdate
+" autocmd BufWritePost *.c :silent! :TlistUpdate
+" autocmd BufWritePost *.py :silent! :TlistUpdate
 
 "Build tags libs for the current working directory
-map <F8> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+" map <F8> :!/usr/bin/ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 

@@ -3,22 +3,12 @@ out_to_console yes
 short_units yes
 update_interval 1
 max_text_width 0
-
+text_buffer_size 512
 TEXT
 [\
 
-{ "full_text" : ${if_mpd_playing} "♪", "color" : "\#EEE8D5", "separator" : false, "separator_block_width" : 3 },\
-{ "full_text" : "${mpd_artist 20} - ${mpd_title 30}"${else}""${endif}, "color" : "\#268BD2", "min_width" : 300, "separator" : false, "separator_block_width" : 10 },\
-#BTC:
+${execpi 5 bash ~/Scripts/music-conky.sh}\
 ${execpi 600 python ~/workspace/python/btcprices-new.py price}\
-#{"full_text":"Now","color":"\#888888","separator":false,"separator_block_width":6},\
-#{"full_text":"${execpi 600 ~/workspace/python/btcprices.py price}","color":"\#EEEEEE","separator":false},\
-#{"full_text":"High","color":"\#888888","separator":false,"separator_block_width":6},\
-#{"full_text":"${execpi 1200 ~/workspace/python/btcprices.py high}","color":"\#AAF096","separator":false},\
-#{"full_text":"Low","color":"\#888888","separator":false,"separator_block_width":6},\
-#{"full_text":"${execpi 1300 ~/workspace/python/btcprices.py low}","color":"\#FF3333","separator":false},\
-#{"full_text":"Vol","color":"\#888888","separator":false,"separator_block_width":6},\
-#{"full_text":"${execpi 1400 ~/workspace/python/btcprices.py vol}","color":"\#F0DC64","separator":false},\
 
 # Uptime:
 {"full_text":"UPTIME","color":"\#888888","separator":false,"separator_block_width":6},\

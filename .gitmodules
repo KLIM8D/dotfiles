@@ -31,3 +31,9 @@
 [submodule ".vim_runtime/sources_non_forked/vim-notes"]
 	path = .vim_runtime/sources_non_forked/vim-notes
 	url = git@github.com:xolox/vim-notes.git
+[submodule ".vim_runtime/sources_non_forked/tagbar"]
+	path = .vim_runtime/sources_non_forked/tagbar
+	url = git@github.com:majutsushi/tagbar.git
+[submodule ".vim_runtime/sources_non_forked/vim-misc"]
+	path = .vim_runtime/sources_non_forked/vim-misc
+	url = git@github.com:xolox/vim-misc.git
