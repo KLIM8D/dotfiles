@@ -243,9 +243,6 @@ imap <C-z> <ESC><C-z>i
 nmap <C-y> :redo<CR>
 " map CTRL + y to redo changes (INSERT MODE)
 imap <C-y> <ESC><C-y>i
-" Move 10 lines down
-map <C-j> 20j
-map <C-k> 20k
 
 "dragvisuals
 vmap <expr> <LEFT>  DVB_Drag('left')
@@ -279,9 +276,9 @@ map <silent> <leader><cr> :noh<cr>
 
 " Smart way to move between windows
 map <C-j> <C-W>j
-map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
+map <C-k> <C-W>k
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>
