@@ -6,9 +6,16 @@ max_text_width 0
 text_buffer_size 512
 TEXT
 [\
-
+#Music:
 ${execpi 5 bash ~/Scripts/music-conky.sh}\
+#BTC:
 ${execpi 600 python ~/workspace/python/btcprices-new.py price}\
+
+#VPN:
+{"full_text":"VPN","color":"\#888888","separator":false,"separator_block_width":6},\
+{"full_text":"${if_up tun0}UP","color":"\#AAF096","separator":false,"separator_block_width":6},\
+{"full_text":"${else}DOWN","color":"\#FF3333","separator":false,"separator_block_width":6},\
+{"full_text":"${endif}"},\
 
 # Uptime:
 {"full_text":"UPTIME","color":"\#888888","separator":false,"separator_block_width":6},\

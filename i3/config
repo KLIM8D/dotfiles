@@ -31,8 +31,8 @@ new_window pixel 1
 new_float pixel 1
 
 # start a terminal
-#bindsym $mod+Shift+Return exec i3-sensible-terminal -fn 'xft:Liberation Mono for Powerline:pixelsize=22' -e tmux
-bindsym $mod+Shift+Return exec i3-sensible-terminal -fn 'xft:Liberation Mono for Powerline:pixelsize=12' -e tmux
+#bindsym $mod+Shift+Return exec i3-sensible-terminal -fn 'xft:Liberation Mono for Powerline:pixelsize=22' -e tmux -2
+bindsym $mod+Shift+Return exec i3-sensible-terminal -fn 'xft:Liberation Mono for Powerline:pixelsize=12' -e tmux -2
 
 # kill focused window
 bindsym $mod+q kill

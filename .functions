@@ -1,0 +1,48 @@
+#!/bin/zsh
+# vim set ft=sh;
+
+function clipboard_insert() {
+    xclip -selection clipboard
+}
+
+# Take a screenshot of the selected area and upload the picture to upl.io.
+# Save the URL in the clipboard
+function uplio() {
+    file="`date +'/tmp/%d-%m-%y-%H_%M_%S.png'`"
+    scrot -s $file
+    curl -F file=@$file -F key=61ngi9q31w1gcyo2s1s3ukwwm0iw7omj http://upl.io | tr -d '\n' | clipboard_insert
+}
+
+# Upload file to upl.io and copy the URL to the clipboard
+function uplio_file() {
+    curl -F file="@$1" -F key=61ngi9q31w1gcyo2s1s3ukwwm0iw7omj http://upl.io | tr -d '\n' | clipboard_insert 
+}
+
+# Count the lines in a filetype 
+function countlines() {
+    find . -name '*'$1 | xargs wc -l  
+}
+
+# Extract different kinds of archive formats 
+function extract() {
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)   tar xvjf $1    ;;
+            *.tar.gz)    tar xvzf $1    ;;
+            *.tar.xz)    tar xvf $1     ;;
+            *.bz2)       bunzip2 $1     ;;
+            *.rar)       unrar x $1     ;;
+            *.r00)       unrar x $1     ;;
+            *.gz)        gunzip $1      ;;
+            *.tar)       tar xvf $1     ;;
+            *.tbz2)      tar xvjf $1    ;;
+            *.tgz)       tar xvzf $1    ;;
+            *.zip)       unzip $1       ;;
+            *.Z)         uncompress $1  ;;
+            *.7z)        7z x $1        ;;
+            *)           echo "don't know how to extract '$1'..." ;;
+        esac
+    else
+        echo "'$1' is not a valid file!"
+    fi
+}

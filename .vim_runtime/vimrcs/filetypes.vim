@@ -1,6 +1,6 @@
-""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""
 " => Python section
-""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""
 let python_highlight_all = 1
 au FileType python syn keyword pythonDecorator True None False self
 
@@ -19,9 +19,9 @@ au FileType python map <buffer> <leader>C ?class
 au FileType python map <buffer> <leader>D ?def 
 
 
-""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""
 " => JavaScript section
-"""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""
 au FileType javascript call JavaScriptFold()
 au FileType javascript setl fen
 au FileType javascript setl nocindent
@@ -42,3 +42,9 @@ function! JavaScriptFold()
     endfunction
     setl foldtext=FoldText()
 endfunction
+
+""""""""""""""""""""""""""""""""
+" => Assembly
+""""""""""""""""""""""""""""""""
+au BufRead,BufNewFile *.s   let asmsyntax='gas'|let filetype_inc='gas'
+au BufRead,BufNewFile *.asm let asmsyntax='armasm'|let filetype_inc='armasm'

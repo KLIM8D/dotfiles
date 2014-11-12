@@ -1,6 +1,7 @@
 " Maintainer:	Henrique C. Alves (hcarvalhoalves@gmail.com)
 " Version:      1.0
 " Last Change:	September 25 2008
+" Modified by: klim8d - 2014
 
 set background=dark
 
@@ -38,12 +39,13 @@ hi Visual         guifg=#faf4c6 guibg=#3c414c guisp=#3c414c gui=NONE ctermfg=230
 hi SpecialKey     guifg=#808080 guibg=#343434 guisp=#343434 gui=NONE ctermfg=237  ctermbg=236 cterm=NONE
 hi TabLineFill    guifg=NONE    guibg=#424242 guisp=#424242 gui=NONE ctermfg=NONE ctermbg=238 cterm=NONE
 hi TabLine        guifg=NONE    guibg=#424242 guisp=#424242 gui=NONE ctermfg=NONE ctermbg=238 cterm=NONE
+hi Search         guifg=#000000 guibg=#7a9c00 guisp=#7a9c00 gui=NONE ctermfg=NONE ctermbg=106 cterm=NONE
 
 " Syntax highlighting
 hi Comment        guifg=#808080 guibg=NONE guisp=NONE gui=italic ctermfg=237 ctermbg=NONE cterm=NONE
 hi Todo           guifg=#8f8f8f guibg=NONE guisp=NONE gui=italic ctermfg=245 ctermbg=NONE cterm=NONE
-hi Boolean        guifg=#b1d631 guibg=NONE guisp=NONE gui=NONE ctermfg=149 ctermbg=NONE cterm=NONE
 hi String         guifg=#b1d631 guibg=NONE guisp=NONE gui=italic ctermfg=149 ctermbg=NONE cterm=NONE
+hi Boolean        guifg=#b1d631 guibg=NONE guisp=NONE gui=NONE ctermfg=149 ctermbg=NONE cterm=NONE
 hi Identifier     guifg=#b1d631 guibg=NONE guisp=NONE gui=NONE ctermfg=149 ctermbg=NONE cterm=NONE
 hi Function       guifg=#ffffff guibg=NONE guisp=NONE gui=bold ctermfg=15  ctermbg=NONE cterm=bold
 hi Type           guifg=#7e8aa2 guibg=NONE guisp=NONE gui=NONE ctermfg=103 ctermbg=NONE cterm=NONE
@@ -67,4 +69,4 @@ hi DiffText       guifg=NONE    guibg=#4C4745 guisp=#4C4745 gui=bold,italic cter
 hi pythonOperator guifg=#7e8aa2 gui=none ctermfg=103
 
 " Different color past 80 columns
-execute "set colorcolumn=" . join(range(81,335), ',')
+autocmd BufRead *.go,*.py,*.c*,*.sh,*.vimrc,*.j*,*.r* execute "setlocal colorcolumn=" . join(range(81,335), ',')

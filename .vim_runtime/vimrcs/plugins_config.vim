@@ -195,3 +195,5 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_python_flake8_exec = 'flake8-python2'
+let g:syntastic_loc_list_height = 5
+let g:syntastic_aggregate_errors = 1

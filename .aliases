@@ -1,3 +1,6 @@
+#!/bin/zsh
+# vim set ft=sh;
+
 ## Exports ##
 export EDITOR='gvim'
 export BROWSER='/bin/firefox'
@@ -14,6 +17,7 @@ alias cdd='cd /home/klim/Downloads/'
 alias grep='grep --color=auto'
 alias load-aliases='source ~/.aliases'
 alias sizeof='du -sh'
+alias feral='ssh mikk@chaos.feralhosting.com'
 alias server='sh ~/Scripts/ssh-wastedwombat.sh'
 alias quit='exit'
 alias archey='archey3'
@@ -24,39 +28,14 @@ alias temps='sensors'
 alias targz='tar -zcvf'
 alias showtargz='tar -ztvf'
 alias showtar='tar -tvf'
+alias viewtargz=showtargz
+alias viewtar=showtar
 alias orphan-remove='pacman -Rs $(pacman -Qqtd)'
 alias spideroak='SpiderOak -v --headless'
+alias packer-update='packer -Syu --noedit --noconfirm --auronly'
 alias intellij-idea-community-edition='/usr/bin/idea.sh'
 alias colortest="python -c \"print('\n'.join([(' '.join([('\033[38;5;' + str((i + j)) + 'm' + str((i + j)).ljust(5) + '\033[0m') if i + j < 256 else '' for j in range(10)])) for i in range(0, 256, 10)]))\""
 alias pbcopy='xclip -selection clipboard'        # copy to clipboard, ctrl+c, ctrl+shift+c
 alias pbpaste='xclip -selection clipboard -o'    # paste from clipboard, ctrl+v, ctrl+shitt+v
 alias pbselect='xclip -selection primary -o'     # paste from highlight, middle click, shift+insert
-
-## Count lines ##
-countlines () 
-{
-    find . -name '*'$1 | xargs wc -l  
-}
-
-## Easy Extract ##
-extract () {
-    if [ -f $1 ] ; then
-        case $1 in
-            *.tar.bz2)   tar xvjf $1    ;;
-            *.tar.gz)    tar xvzf $1    ;;
-            *.bz2)       bunzip2 $1     ;;
-            *.rar)       unrar x $1     ;;
-            *.r00)       unrar x $1     ;;
-            *.gz)        gunzip $1      ;;
-            *.tar)       tar xvf $1     ;;
-            *.tbz2)      tar xvjf $1    ;;
-            *.tgz)       tar xvzf $1    ;;
-            *.zip)       unzip $1       ;;
-            *.Z)         uncompress $1  ;;
-            *.7z)        7z x $1        ;;
-            *)           echo "don't know how to extract '$1'..." ;;
-        esac
-    else
-        echo "'$1' is not a valid file!"
-    fi
-}
+alias fiddler='/opt/fiddler/Fiddler.exe'

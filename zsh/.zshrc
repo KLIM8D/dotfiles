@@ -56,7 +56,9 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl"
 # Aliases
-source $HOME/.aliases 
+source $HOME/.aliases
+# Functions
+source $HOME/.functions
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -77,3 +79,10 @@ export LANG=en_DK.UTF-8
 #
 # Tab-complete colors
 zstyle -e ':completion:*:default' list-colors 'reply=("${PREFIX:+=(#bi)($PREFIX:t)(?)*==36=36}:${(s.:.)LS_COLORS}")'; 
+
+# folder of all of your autocomplete functions
+fpath=($HOME/.zsh-completions $fpath)
+
+# enable autocomplete function
+autoload -U compinit
+compinit
