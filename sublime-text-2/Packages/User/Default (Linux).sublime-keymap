@@ -1,4 +1,0 @@
-[
-{ "keys": ["alt+ctrl+r"], "command": "refresh_folder_list" },
-{ "keys": ["super+m"], "command": "pastebin" }
-]

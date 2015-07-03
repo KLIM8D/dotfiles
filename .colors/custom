@@ -1,4 +1,5 @@
-URxvt.background: #1f1f1f
+!URxvt.background: #1f1f1f
+URxvt.background: #171717
 URxvt.foreground: #9a9b9b
 ! Default
 ! 0: black

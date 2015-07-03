@@ -1,8 +1,0 @@
-org.intellij.groovy
-org.jetbrains.plugins.gradle
-org.jetbrains.idea.maven
-com.intellij.commander
-hg4idea
-CVS
-AntSupport
-Subversion
