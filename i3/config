@@ -18,18 +18,21 @@
 # chose a FreeType font, such as:
 # font pango:DejaVu Sans Mono 10
 #font xft:Droid Sans Mono 9
-font xft:Droid Sans Mono 11 
+font xft:Droid Sans Mono 10
+
 workspace_auto_back_and_forth yes
 
 set $mod Mod4
 
-# use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
-
+###__WINDOWS__###
 new_window pixel 1
 #new_float 1pixel
 new_float pixel 1
 
+# use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+###__HOTKEYS__##
 # start a terminal
 #bindsym $mod+Shift+Return exec i3-sensible-terminal -fn 'xft:Liberation Mono for Powerline:pixelsize=22' -e tmux -2
 bindsym $mod+Shift+Return exec i3-sensible-terminal -fn 'xft:Liberation Mono for Powerline:pixelsize=12' -e tmux -2
@@ -38,11 +41,14 @@ bindsym $mod+Shift+Return exec i3-sensible-terminal -fn 'xft:Liberation Mono for
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+r exec --no-startup-id dmenu_run -fn 'Droid Sans Mono-9'
+#bindsym $mod+r exec --no-startup-id dmenu_run -fn 'Droid Sans Mono-9'
+bindsym $mod+r exec --no-startup-id dmenu_recent_aliases -fn 'Droid Sans Mono-11'
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+#bindsym $mod+p exec --no-startup-id /home/klim/Scripts/passmenu -fn 'Droid Sans Mono-9'
+bindsym $mod+p exec --no-startup-id /home/klim/Scripts/passmenu -fn 'Droid Sans Mono-11'
 
 # change focus
 bindsym $mod+j focus left
@@ -89,46 +95,57 @@ bindsym $mod+Shift+space floating toggle
 #bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-bindsym Mod1+Tab focus right
+bindsym Mod1+Tab focus down
 
 # focus the child container
 #bindsym $mod+d focus child
 
+set $ws1  "1"
+set $ws2  "2"
+set $ws3  "3"
+set $ws4  "4"
+set $ws5  "5"
+set $ws6  "6"
+set $ws7  "7"
+set $ws8  "8"
+set $ws9  "9"
+set $ws10 "10"
+
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
-bindsym $mod+s workspace Skype
-bindsym $mod+i workspace Irc
-bindsym $mod+m workspace Mail
-bindsym $mod+n workspace Music
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+bindsym $mod+s workspace skype
+bindsym $mod+i workspace irc
+bindsym $mod+n workspace music
+bindsym $mod+m workspace mail
 
 #Switch between workspaces
 bindsym $mod+z workspace back_and_forth
 bindsym $mod+Shift+z move container to workspace back_and_forth
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
-bindsym $mod+Shift+s move container to workspace Skype
-bindsym $mod+Shift+i move container to workspace Irc 
-bindsym $mod+Shift+n move container to workspace Music
-bindsym $mod+Shift+m move container to workspace Mail
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+0 move container to workspace number $ws10
+bindsym $mod+Shift+S move container to workspace skype
+bindsym $mod+Shift+I move container to workspace irc
+bindsym $mod+Shift+M move container to workspace mail
+bindsym $mod+Shift+N move container to workspace music
 
 #Window Control
 
@@ -142,8 +159,8 @@ for_window [title="Press This - Mozilla Firefox" class="Firefox"] floating enabl
 # browser pop-ups
 for_window [window_role="pop-up"] floating enable,move absolute center
 
-assign [class="Skype"] Skype
-assign [class="Weechat"] Irc
+assign [class="Skype"] skype
+assign [class="Weechat"] irc
 
 # colors
  
@@ -155,20 +172,26 @@ assign [class="Weechat"] Irc
 ## RED ACTIVE BORDER
 #client.focused                 #bf3f34 #bf3f34  #111111
 ## ORANGE ACTIVE BORDER
-client.focused                  #bd0707 #bd0707 #111111
+#client.focused                  #bd0707 #bd0707 #111111
 ## LIGHTER RED ACTIVE BORDER
 #client.focused                 #cc5555 #cc5555  #111111
 client.unfocused               #444444 #444444  #315858
 client.focused_inactive        #444444 #444444  #2c2c2f
 client.urgent                  #383a3b #383a3b  #ee0000
 
+#Green theme
+client.focused                  #7a9c00 #7a9c00 #111111 #7A0404
+
+
 #Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command $HOME/Scripts/i3-conky-wrapper.sh
+        #status_command    python $HOME/.i3/i3status.py 
+        status_command $HOME/.i3/i3-conky-wrapper.sh
         #tray_output primary 
         position top
         mode dock
+        workspace_buttons yes
 #       font pango:fixed 6
         #font pango:Convergence 9px
   colors {
@@ -215,7 +238,51 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym Mod1+Shift+r mode "resize"
+bindsym Mod1+Shift+R mode "resize"
+
+
+###__GAPS__##
+set $mode_gaps Gaps: (o) outer, (i) inner  
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)  
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+
+gaps inner 6 
+gaps outer 2  
+smart_gaps on
+
+bindsym $mod+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {  
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_inner" {  
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {  
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -238,6 +305,9 @@ mode "$mode_system" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+
+
+###__AUTOSTART__###
 bindsym Control+$mod+Escape mode "$mode_system"
 bindsym XF86AudioMute exec sh ~/Scripts/pulseaudio-ctl mute 
 bindsym XF86Tools exec sh ~/Scripts/musicPlayer
@@ -248,7 +318,10 @@ bindsym XF86AudioNext exec sh ~/Scripts/checkRunning.sh next
 bindsym XF86AudioRaiseVolume exec sh ~/Scripts/pulseaudio-ctl plus
 bindsym XF86AudioLowerVolume exec sh ~/Scripts/pulseaudio-ctl minus
 bindsym XF86AudioRewind exec mpc random
+
 exec --no-startup-id eval $($HOME/Scripts/wallpaper)
+exec --no-startup-id /usr/bin/compton -bG --config $HOME/.i3/compton.conf
 exec --no-startup-id $HOME/Scripts/low-battery
+exec --no-startup-id /usr/bin/connman-ui-gtk
 #exec --no-startup-id $HOME/.fehbg
 #exec --no-startup-id i3-msg 'workspace Mail; exec urxvt -name Mail -e /usr/bin/mutt'

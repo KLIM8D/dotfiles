@@ -19,7 +19,8 @@ colorscheme mustang
 if has("win16") || has("win32")
     set gfn=Bitstream\ Vera\ Sans\ Mono:h10
 else
-    set gfn=Monospace\ 10
+    "set gfn=Monospace\ 10
+    set gfn=DejaVu\ Sans\ Mono\ for\ Powerline\ 10 
     set shell=/bin/zsh
 endif
 
@@ -79,9 +80,12 @@ cnoremap <C-N> <Down>
 
 " Map ½ to something useful
 map ½ $
-cmap ½ $
-imap ½ $
+"cmap ½ $
+"imap ½ $
 
+map <S-§> 0
+cmap <S-§> 0
+imap <S-§> §0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Parenthesis/bracket
@@ -118,6 +122,8 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
+"Disable preview window. Default =menu,preview
+set completeopt=menu
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
@@ -144,6 +150,15 @@ endfunc
 
 func! CurrentFileDir(cmd)
     return a:cmd . " " . expand("%:p:h") . "/"
+endfunc
+
+func! SetGoPath()
+    let sys_pwd = getcwd()
+    let $GOPATH=sys_pwd . "/.vendor:" . $GOPATH
+endfunc
+
+func! ResetGoPath()
+    let $GOPATH="/home/klim/workspace/go"
 endfunc
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

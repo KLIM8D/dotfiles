@@ -162,6 +162,7 @@ SHIFT+*             Search for word under cursor
 :%s/foo/bar/gi		The same as above, but ignore the case of the pattern you want to substitute. This replaces foo, FOO, Foo, and so on.
 :%s/old/new/gc		replace all old with new throughout file with confirmations
 :%s/foo/bar/c		For each line on the file, replace the first occurrence of foo with bar and confirm every substitution.
+:%s/\<foo\>/bar/g   Match and replace only whole word ("foo", not "foobar")
 
 :rs/foo/bar/a		Substitute foo with bar. r determines the range and a determines the arguments.
 

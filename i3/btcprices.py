@@ -21,5 +21,5 @@ elif sys.argv[1] == "low":
     low = data['result']['XXBTZEUR']['l'][0]
     print("{0:.2f}".format(float(low)))
 elif sys.argv[1] == "vol":
-    volume = data['result']['XXBTZEUR']['v'][1]
+    volume = data['result']['XXBTZEUR']['v'][0]
     print("{0:.2f}".format(float(volume)))

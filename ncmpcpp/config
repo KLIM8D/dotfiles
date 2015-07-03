@@ -102,9 +102,17 @@ now_playing_prefix = "$b"
 #song_columns_list_format = "(4)[blue]{n:#} (25)[blue]{a} (40)[blue]{t|f} (30)[blue]{b} (7f)[blue]    {l}"
 progressbar_look = "✠❱•"
 progressbar_color = "green"
-screen_switcher_mode = "sequence: 2 -> 5"
-startup_screen = "2"
-ask_before_clearing_main_playlist = "yes"
+#screen_switcher_mode = "sequence: 2 -> 5"
+## How shall screen switcher work?
+##
+## - "previous" - switch between the current and previous screen.
+## - "screen1,...,screenN" - switch between given sequence of screens.
+##
+## Screens available for use: help, playlist, browser, search_engine,
+## media_library, playlist_editor, tag_editor, outputs, visualizer, clock.
+screen_switcher_mode = playlist, media_library 
+startup_screen = playlist 
+#ask_before_clearing_main_playlist = "yes"
 clock_display_seconds = "yes"
 message_delay_time = "3"
 playlist_shorten_total_times = "yes"
@@ -118,8 +126,8 @@ user_interface = "alternative"
 follow_now_playing_lyrics = "yes"
 locked_screen_width_part = "60"
 display_bitrate = "yes"
-allow_physical_files_deletion = "no"
-allow_physical_directories_deletion = "no"
+#allow_physical_files_deletion = "no"
+#allow_physical_directories_deletion = "no"
 external_editor = "gvim"
 use_console_editor = "yes"
 header_window_color = "cyan"

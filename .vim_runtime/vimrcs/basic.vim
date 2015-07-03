@@ -66,6 +66,8 @@ set nocompatible
 
 " show line numbers
 set number
+" show cursorline
+set cursorline
 " stop lines from wrapping
 set nowrap
 

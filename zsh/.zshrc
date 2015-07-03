@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="agnoster"
+ZSH_THEME="norm"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -56,7 +56,7 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl"
 # Aliases
-source $HOME/.aliases
+source $HOME/.zsh_aliases
 # Functions
 source $HOME/.functions
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -86,3 +86,9 @@ fpath=($HOME/.zsh-completions $fpath)
 # enable autocomplete function
 autoload -U compinit
 compinit
+
+alias grep="/usr/bin/grep $GREP_OPTIONS"
+unset GREP_OPTIONS
+
+# Directory colors
+eval `dircolors ~/.dircolors`
