@@ -72,3 +72,9 @@ hi pythonOperator guifg=#7e8aa2 gui=none ctermfg=103
 
 " Different color past 80 columns
 autocmd BufRead *.go,*.py,*.c*,*.sh,*.vimrc,*.j*,*.r* execute "setlocal colorcolumn=" . join(range(81,335), ',')
+
+" Plugins
+highlight BookmarkSign               guifg=#005252 guibg=#202020 guisp=#202020 gui=NONE ctermbg=NONE ctermfg=NONE cterm=NONE
+highlight BookmarkAnnotationSign     guifg=#005252 guibg=#202020 guisp=#202020 gui=NONE ctermbg=NONE ctermfg=NONE cterm=NONE 
+highlight BookmarkLine               guifg=#005252 guibg=#202020 guisp=#202020 gui=NONE ctermbg=NONE ctermfg=NONE cterm=NONE
+highlight BookmarkAnnotationLine     guifg=#005252 guibg=#202020 guisp=#202020 gui=NONE ctermbg=NONE ctermfg=NONE cterm=NONE

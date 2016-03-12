@@ -65,7 +65,9 @@ nmap <leader>w :w!<cr>
 set nocompatible
 
 " show line numbers
-set number
+"set number
+" show relative line numbers
+set relativenumber
 " show cursorline
 set cursorline
 " stop lines from wrapping

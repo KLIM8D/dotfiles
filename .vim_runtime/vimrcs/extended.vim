@@ -11,6 +11,7 @@
 set background=dark
 set t_Co=256
 colorscheme mustang
+"colorscheme hybrid
 
 " Set font according to system
 "if has("mac") || has("macunix")
@@ -154,7 +155,7 @@ endfunc
 
 func! SetGoPath()
     let sys_pwd = getcwd()
-    let $GOPATH=sys_pwd . "/.vendor:" . $GOPATH
+    let $GOPATH=sys_pwd . "/vendor:" . $GOPATH
 endfunc
 
 func! ResetGoPath()
