@@ -1,1 +1,60 @@
-/home/klim/.functions
+#!/bin/zsh
+# vim set ft=sh;
+
+UPLIO_KEY="qwblzobick8ia8daoi24cx30i7qxf9j3"
+WABIO_KEY="be82a533b31b45079706b10b26fbc1ad"
+
+function clipboard_insert() {
+/bin/xclip -selection clipboard
+}
+
+# Take a screenshot of the selected area and upload the picture to upl.io.
+# Save the URL in the clipboard
+function uplio() {
+file="`date +'/tmp/%d-%m-%y-%H_%M_%S.png'`"
+/bin/escrotum -s $file
+/bin/curl -s -F file=@$file -F key=$UPLIO_KEY https://upl.io | tr -d '\n' | clipboard_insert
+rm $file
+}
+
+# Upload file to upl.io and copy the URL to the clipboard
+function uplio_file() {
+/bin/curl -F file="@$1" -F key=$UPLIO_KEY https://upl.io | tr -d '\n' | clipboard_insert 
+}
+
+function wabio() {
+/bin/curl -s -F url=$("/bin/xclip" -o) -F key=$WABIO_KEY https://wab.io | tr -d '\n' | clipboard_insert 
+}
+
+# Count the lines in a filetype 
+function countlines() {
+/bin/find . -name '*'$1 | xargs wc -l  
+}
+
+# Extract different kinds of archive formats 
+function extract() {
+if [ -f $1 ] ; then
+    case $1 in
+        *.tar.bz2)   tar xvjf $1    ;;
+        *.tar.gz)    tar xvzf $1    ;;
+        *.tar.xz)    tar xvf $1     ;;
+        *.bz2)       bunzip2 $1     ;;
+        *.rar)       unrar x $1     ;;
+        *.r00)       unrar x $1     ;;
+        *.gz)        gunzip $1      ;;
+        *.tar)       tar xvf $1     ;;
+        *.tbz2)      tar xvjf $1    ;;
+        *.tgz)       tar xvzf $1    ;;
+        *.zip)       unzip $1       ;;
+        *.Z)         uncompress $1  ;;
+        *.7z)        7z x $1        ;;
+        *)           echo "don't know how to extract '$1'..." ;;
+    esac
+else
+    echo "'$1' is not a valid file!"
+fi
+}
+
+function mountiso() {
+sudo mount -o loop $1 /media/iso
+}

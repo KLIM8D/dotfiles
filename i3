@@ -1,1 +1,0 @@
-/home/klim/.i3

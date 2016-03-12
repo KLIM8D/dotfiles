@@ -1,1 +1,49 @@
-/home/klim/.zsh_aliases
+#!/bin/zsh
+# vim set ft=sh;
+
+## Exports ##
+export EDITOR='gvim'
+export BROWSER='/bin/firefox'
+export GOPATH=$HOME/workspace/go
+export GO15VENDOREXPERIMENT=1
+export PATH=$PATH:/home/klim/Scripts:$GOPATH/bin
+export PYTHONPATH=/usr/lib/python3.4/site-packages
+export RUST_SRC_PATH=/home/klim/.src/rust/src
+## Aliases ##
+alias ls='ls --color=auto --group-directories-first'
+alias pacman='sudo pacman'
+alias cdd='cd /home/klim/Downloads/'
+alias grep='grep --color=auto'
+alias load-aliases='source ~/.aliases'
+alias sizeof='du -sh'
+alias feral='ssh mikk@pallas.feralhosting.com'
+alias server='sh ~/Scripts/helium-ssh'
+alias quit='exit'
+alias archey='archey3'
+alias la='ls -A'
+alias lr='la -R | grep'
+alias temp='sensors'
+alias temps='sensors'
+alias targz='tar -zcvf'
+alias showtargz='tar -ztvf'
+alias showtar='tar -tvf'
+alias viewtargz=showtargz
+alias viewtar=showtar
+alias orphan-remove='pacman -Rs $(pacman -Qqtd)'
+alias spideroak='SpiderOak -v --headless'
+alias packer-update='packer -Syu --noedit --noconfirm --auronly'
+alias colortest="python -c \"print('\n'.join([(' '.join([('\033[38;5;' + str((i + j)) + 'm' + str((i + j)).ljust(5) + '\033[0m') if i + j < 256 else '' for j in range(10)])) for i in range(0, 256, 10)]))\""
+alias pbcopy='xclip -selection clipboard'        # copy to clipboard, ctrl+c, ctrl+shift+c
+alias pbpaste='xclip -selection clipboard -o'    # paste from clipboard, ctrl+v, ctrl+shitt+v
+alias pbselect='xclip -selection primary -o'     # paste from highlight, middle click, shift+insert
+alias fiddler='/opt/fiddler/Fiddler.exe'
+alias tv="/home/klim/Scripts/tv.sh"
+alias hon="primusrun /home/klim/HoN/hon.sh"
+alias monitors="/home/klim/Scripts/monitors.sh"
+alias rec="asciinema rec"
+alias nethome="sudo netctl start wired-home && sudo vpn start Sweden"
+alias ranger="exec urxvt -fn 'xft:Liberation Mono for Powerline:pixelsize=12' -e tmux -2 -c ranger"
+#alias for the fuck
+eval "$(thefuck --alias)"
+alias irc="mosh irc@192.168.1.2 --ssh=\"/bin/ssh -p 9001 -i ~/.ssh/irc\" -- screen -c /home/irc/.screen.rc -D -RR irc -UxaA"
+alias godebug="dlv"
