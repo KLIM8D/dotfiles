@@ -1,0 +1,13 @@
+#!/bin/bash
+artist=$(mpc -f %artist% | head -n 1| sed "s/&/and/g")
+song=$(mpc -f %title% | head -n 1)
+state=$(mpc | awk '/\[/ { print $1 }' | tr -d '[]')
+mpd_status=$(mpc status)
+song_length=$(mpc | awk '/\[/ { print $3 }')
+playlist_position=$(mpc | awk '/\[/ { print $2 }' | tr -d '#')
+icon='<span color=\"#BA2020\"></span>'
+
+if [ "$state" == "playing" ]
+then
+    echo -n "$artist - $song [$playlist_position]"
+fi

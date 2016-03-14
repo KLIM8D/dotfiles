@@ -1,0 +1,119 @@
+#vim: set ft=conf
+
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+# The top properties below are applied to every block, but can be overridden.
+# Each block command defaults to the script name to avoid boilerplate.
+command=$SCRIPT_DIR/$BLOCK_NAME
+full_text=•
+align=center
+separator=false
+separator_block_width=3
+markup=pango
+
+[mpc_playing]
+command=echo -n "<span color=\"#BA2020\"></span>" $($SCRIPT_DIR/$BLOCK_NAME)
+interval=20
+
+[separator]
+
+[bitcoin]
+command=echo -n "<span color=\"#BA2020\"></span>" $($HOME/.i3/btcprices.py price)
+interval=300
+
+[separator]
+
+# Generic media player support
+#
+# This displays "ARTIST - SONG" if a music is playing.
+# Supported players are: spotify, vlc, audacious, xmms2, mplayer, and others.
+#[mediaplayer]
+#instance=mpd
+#interval=5
+#signal=10
+
+# Temperature
+#
+# Support multiple chips, though lm-sensors.
+# The script may be called with -w and -c switches to specify thresholds,
+# see the script for details.
+[temp]
+interval=10
+
+[separator]
+
+# CPU usage
+#
+# The script may be called with -w and -c switches to specify thresholds,
+# see the script for details.
+[cpu_usage]
+interval=5
+min_width= 100.00%
+#separator=false
+
+[separator]
+
+# Memory usage
+#
+# The type defaults to "mem" if the instance is not specified.
+[mem]
+command=echo -n "<span color=\"#BA2020\"></span>" $(free -m | awk '/Mem:/ { print $3 }') "MB"
+interval=30
+
+[separator]
+
+# OpenVPN support
+#
+# Support multiple VPN, with colors.
+[openvpn]
+interval=once
+signal=20
+
+[separator]
+
+[battery]
+command=$SCRIPT_DIR/battery.py
+interval=180
+
+[separator]
+
+# Volume indicator
+#
+# The first parameter sets the step (and units to display)
+# The second parameter overrides the mixer selection
+# See the script for details.
+#[volume]
+#instance=Master
+#instance=PCM
+#interval=once
+#signal=10
+
+#[separator]
+
+# Date Time
+#
+[time]
+command=echo -n "<span color=\"#BA2020\"></span>" $(date '+%a %d-%m-%Y %H:%M')
+interval=5
