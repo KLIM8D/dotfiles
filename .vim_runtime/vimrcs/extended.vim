@@ -1,7 +1,12 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Important: 
-"       This requries that you install https://github.com/amix/vimrc !
-"
+" Sections: 
+"   -> GUI related
+"   -> Command mode related
+"   -> Parenthesis/bracket
+"   -> General abbreviations
+"   -> Omni complete functions
+"   -> Helper functions
+"       
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -10,8 +15,12 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
 set t_Co=256
-colorscheme mustang
-"colorscheme hybrid
+"colorscheme mustang
+colorscheme gruvbox
+""let g:gruvbox_termcolors=16 " for very shitty display / screen / term
+let g:gruvbox_contrast_dark="dark"
+"let g:gruvbox_contrast_light="hard"
+set background=dark
 
 " Set font according to system
 "if has("mac") || has("macunix")
@@ -41,22 +50,49 @@ set guioptions-=b
 set guioptions-=h
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Fast editing and reloading of vimrc configs
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>e :e! ~/.vim_runtime/my_configs.vim<cr>
-autocmd! bufwritepost vimrc source ~/.vim_runtime/my_configs.vim
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Turn persistent undo on 
 "    means that you can undo even when you close a buffer/VIM
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-try
-    set undodir=~/.vim_runtime/temp_dirs/undodir
-    set undofile
-catch
-endtry
 
+" Save your backups to a less annoying place than the current directory.
+" If you have .vim-backup in the current directory, it'll use that.
+" Otherwise it saves it to ~/.vim/backup or . if all else fails.
+if isdirectory($HOME . '/.vim/backup') == 0
+  :silent !mkdir -p ~/.vim/backup >/dev/null 2>&1
+endif
+set backupdir-=.
+set backupdir+=.
+set backupdir-=~/
+set backupdir^=~/.vim/backup/
+set backupdir^=./.vim-backup/
+set backup
+
+" Save your swp files to a less annoying place than the current directory.
+" If you have .vim-swap in the current directory, it'll use that.
+" Otherwise it saves it to ~/.vim/swap, ~/tmp or .
+if isdirectory($HOME . '/.vim/swap') == 0
+  :silent !mkdir -p ~/.vim/swap >/dev/null 2>&1
+endif
+set directory=./.vim-swap//
+set directory+=~/.vim/swap//
+set directory+=~/tmp//
+set directory+=.
+
+" viminfo stores the the state of your previous editing session
+set viminfo+=n~/.vim/viminfo
+
+if exists("+undofile")
+  " undofile - This allows you to use undos after exiting and restarting
+  " This, like swap and backups, uses .vim-undo first, then ~/.vim/undo
+  " :help undo-persistence
+  " This is only present in 7.3+
+  if isdirectory($HOME . '/.vim/undo') == 0
+    :silent !mkdir -p ~/.vim/undo > /dev/null 2>&1
+  endif
+  set undodir=./.vim-undo//
+  set undodir+=~/.vim/undo//
+  set undofile
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Command mode related
@@ -155,11 +191,11 @@ endfunc
 
 func! SetGoPath()
     let sys_pwd = getcwd()
-    let $GOPATH=sys_pwd . "/vendor:" . $GOPATH
+    let $GOPATH=sys_pwd . "/.vendor:" . $GOPATH
 endfunc
 
 func! ResetGoPath()
-    let $GOPATH="/home/klim/workspace/go"
+    let $GOPATH="$HOME/workspace/go"
 endfunc
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

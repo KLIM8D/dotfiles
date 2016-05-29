@@ -1,14 +1,24 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Important: 
-"       This requries that you install https://github.com/amix/vimrc !
+" Sections:
+"    -> Pathogen
+"    -> Unite
+"    -> VIM grep
+"    -> Sorround
+"    -> Ctags & Tagbar
+"    -> Upload section to Uplio
+"    -> UltiSnips
+"    -> Syntastic
+"    -> OmniSharp
+"    -> Airline
+"    -> Racer (rust)
+"    -> Extradite (git diff view)
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 
 """"""""""""""""""""""""""""""
 " => Load pathogen paths
 """"""""""""""""""""""""""""""
-call pathogen#infect('~/.vim_runtime/sources_non_forked')
+call pathogen#infect('~/.vim_runtime/plugins')
 call pathogen#helptags()
 
 """"""""""""""""""""""""""""""
@@ -25,85 +35,14 @@ set grepprg=/bin/grep\ -nH
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => surround.vim config
-" Annotate strings with gettext http://amix.dk/blog/post/19678
+" Annotate strings with gettext 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 vmap Si S(i_<esc>f)
 au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Neocomplete
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Disable AutoComplPop.
-"let g:acp_enableAtStartup = 0
-"" Use neocomplete.
-"let g:neocomplete#enable_at_startup = 1
-"" Use smartcase.
-"let g:neocomplete#enable_smart_case = 1
-"" Set minimum syntax keyword length.
-"let g:neocomplete#sources#syntax#min_keyword_length = 3
-"let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'"
-"
-"" Define dictionary.
-"let g:neocomplete#sources#dictionary#dictionaries = {
-"    \ 'default' : '',
-"    \ 'vimshell' : $HOME.'/.vimshell_hist',
-"    \ 'scheme' : $HOME.'/.gosh_completions'
-"        \ }
-"" Plugin key-mappings.
-"inoremap <expr><C-g>     neocomplete#undo_completion()
-"inoremap <expr><C-l>     neocomplete#complete_common_string()
-"
-"" Recommended key-mappings.
-"" <CR>: close popup and save indent.
-"function! s:my_cr_function()
-"  return pumvisible() ? neocomplete#close_popup() : "\<CR>"
-"endfunction
-"imap <expr><silent> <CR> <SID>my_cr_function()
-"imap <C-X><CR> <CR><Plug>AlwaysEnd
-""inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
-"
-"" <TAB>: completion.
-"inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-"" <C-h>, <BS>: close popup and delete backword char.
-"inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-"inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-"inoremap <expr><C-y>  neocomplete#close_popup()
-"inoremap <expr><C-e>  neocomplete#cancel_popup()
-"" Close popup by <Space>.
-""inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
-"
-"" For cursor moving in insert mode(Not recommended)
-""inoremap <expr><Left>  neocomplete#close_popup() . "\<Left>"
-""inoremap <expr><Right> neocomplete#close_popup() . "\<Right>"
-""inoremap <expr><Up>    neocomplete#close_popup() . "\<Up>"
-""inoremap <expr><Down>  neocomplete#close_popup() . "\<Down>"
-"" Or set this.
-""let g:neocomplete#enable_cursor_hold_i = 1
-"" Or set this.
-""let g:neocomplete#enable_insert_char_pre = 1
-"
-"" AutoComplPop like behavior.
-""let g:neocomplete#enable_auto_select = 1
-"
-"" Shell like behavior(not recommended).
-""set completeopt+=longest
-""let g:neocomplete#enable_auto_select = 1
-""let g:neocomplete#disable_auto_complete = 1
-""inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
-"
-"" Enable heavy omni completion.
-"if !exists('g:neocomplete#sources#omni#input_patterns')
-"  let g:neocomplete#sources#omni#input_patterns = {}
-"endif
-"let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
-"let g:neocomplete#sources#omni#input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)'
-"let g:neocomplete#sources#omni#input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|\h\w*::'
-"
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Ctags & Tagbar
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 noremap <silent> <F4> :Tagbar<CR><C-W>l
 
 " Update TagList at every save for theese filetypes
@@ -159,12 +98,8 @@ vnoremap UU y:call Visual_Uplio()<Enter>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => UltiSnips
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:UltiSnipsSnippetsDir = '~/.vim_runtime/sources_non_forked/ultisnips/UltiSnips'
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:UltiSnipsSnippetsDir = '~/.vim_runtime/plugins/ultisnips/UltiSnips'
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => UltiSnips
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:multi_cursor_use_default_mapping = 0
 " Default mapping
 let g:multi_cursor_next_key = '<C-n>'
@@ -184,6 +119,7 @@ let g:syntastic_python_flake8_exec = 'flake8-python2'
 let g:syntastic_loc_list_height = 5
 let g:syntastic_aggregate_errors = 1
 
+let g:syntastic_go_checkers = ['gobuild', 'govet', 'errcheck']
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => OmniSharp
@@ -288,5 +224,10 @@ nmap <A-9> <Plug>AirlineSelectTab9
 " => Racer (rust)
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "set hidden
-let g:racer_cmd = "/home/klim/workspace/rust/_racer/target/release/racer"
-let $RUST_SRC_PATH="/home/klim/.src/rust/src/"
+let g:racer_cmd=$HOME . "/workspace/rust/_racer/target/release/racer"
+let $RUST_SRC_PATH=$HOME . "/.src/rust/src/"
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Extradite (git diff view)
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nmap <leader>d :Extradite!<cr>

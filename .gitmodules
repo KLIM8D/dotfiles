@@ -1,48 +1,60 @@
-[submodule ".vim_runtime/sources_non_forked/racer"]
-	path = .vim_runtime/sources_non_forked/racer
+[submodule ".vim_runtime/plugins/command-t"]
+	path = .vim_runtime/plugins/command-t
+	url = git@github.com:wincent/command-t.git
+[submodule ".vim_runtime/plugins/gruvbox"]
+	path = .vim_runtime/plugins/gruvbox
+	url = git@github.com:morhetz/gruvbox.git
+[submodule ".vim_runtime/plugins/racer"]
+    path = .vim_runtime/plugins/racer
     url = git@github.com:phildawes/racer.git
-[submodule ".vim_runtime/sources_non_forked/rust.vim"]
-	path = .vim_runtime/sources_non_forked/rust.vim
-	url = git@github.com:rust-lang/rust.vim.git
-[submodule ".vim_runtime/sources_non_forked/syntastic"]
-	path = .vim_runtime/sources_non_forked/syntastic
+[submodule ".vim_runtime/plugins/rust.vim"]
+    path = .vim_runtime/plugins/rust.vim
+    url = git@github.com:rust-lang/rust.vim.git
+[submodule ".vim_runtime/plugins/syntastic"]
+    path = .vim_runtime/plugins/syntastic
     url = git@github.com:scrooloose/syntastic.git
-[submodule ".vim_runtime/sources_non_forked/tagbar"]
-	path = .vim_runtime/sources_non_forked/tagbar
+[submodule ".vim_runtime/plugins/tagbar"]
+    path = .vim_runtime/plugins/tagbar
     url = git@github.com:majutsushi/tagbar.git
-[submodule ".vim_runtime/sources_non_forked/tlib"]
-    path = .vim_runtime/sources_non_forked/tlib
+[submodule ".vim_runtime/plugins/tlib"]
+    path = .vim_runtime/plugins/tlib
     url = git@github.com:vim-scripts/tlib.git
-[submodule ".vim_runtime/sources_non_forked/ultisnips"]
-	path = .vim_runtime/sources_non_forked/ultisnips
+[submodule ".vim_runtime/plugins/ultisnips"]
+    path = .vim_runtime/plugins/ultisnips
     url = git@github.com:SirVer/ultisnips.git
-[submodule ".vim_runtime/sources_non_forked/unite.vim"]
-	path = .vim_runtime/sources_non_forked/unite.vim
-    url = https://github.com/Shougo/unite.vim.git
-[submodule ".vim_runtime/sources_non_forked/vim-airline"]
-	path = .vim_runtime/sources_non_forked/vim-airline
-	url = https://github.com/bling/vim-airline
-[submodule ".vim_runtime/sources_non_forked/vim-bookmarks"]
-	path = .vim_runtime/sources_non_forked/vim-bookmarks
+[submodule ".vim_runtime/plugins/vim-airline"]
+    path = .vim_runtime/plugins/vim-airline
+    url = git@github.com:vim-airline/vim-airline.git
+[submodule ".vim_runtime/plugins/vim-airline-themes"]
+    path = .vim_runtime/plugins/vim-airline-themes
+    url = git@github.com:vim-airline/vim-airline-themes.git
+[submodule ".vim_runtime/plugins/vim-bookmarks"]
+    path = .vim_runtime/plugins/vim-bookmarks
     url = git@github.com:MattesGroeger/vim-bookmarks.git
-[submodule ".vim_runtime/sources_non_forked/vim-flake8"]
-	path = .vim_runtime/sources_non_forked/vim-flake8
+[submodule ".vim_runtime/plugins/vim-extradite"]
+    path = .vim_runtime/plugins/vim-extradite
+    url = git@github.com:int3/vim-extradite.git
+[submodule ".vim_runtime/plugins/vim-flake8"]
+    path = .vim_runtime/plugins/vim-flake8
     url = git@github.com:nvie/vim-flake8.git
-[submodule ".vim_runtime/sources_non_forked/vim-fugitive"]
-	path = .vim_runtime/sources_non_forked/vim-fugitive
+[submodule ".vim_runtime/plugins/vim-fugitive"]
+    path = .vim_runtime/plugins/vim-fugitive
     url = git@github.com:tpope/vim-fugitive.git
-[submodule ".vim_runtime/sources_non_forked/vim-gitgutter"]
-	path = .vim_runtime/sources_non_forked/vim-gitgutter
-	url = git://github.com/airblade/vim-gitgutter.git
-[submodule ".vim_runtime/sources_non_forked/vim-go"]
-	path = .vim_runtime/sources_non_forked/vim-go
-	url = git@github.com:fatih/vim-go.git
-[submodule ".vim_runtime/sources_non_forked/vim-godef"]
-	path = .vim_runtime/sources_non_forked/vim-godef
+[submodule ".vim_runtime/plugins/vim-gitgutter"]
+    path = .vim_runtime/plugins/vim-gitgutter
+    url = git://github.com/airblade/vim-gitgutter.git
+[submodule ".vim_runtime/plugins/vim-go"]
+    path = .vim_runtime/plugins/vim-go
+    url = git@github.com:fatih/vim-go.git
+[submodule ".vim_runtime/plugins/vim-godef"]
+    path = .vim_runtime/plugins/vim-godef
     url = git@github.com:dgryski/vim-godef.git
-[submodule ".vim_runtime/sources_non_forked/vim-misc"]
-	path = .vim_runtime/sources_non_forked/vim-misc
+[submodule ".vim_runtime/plugins/vim-misc"]
+    path = .vim_runtime/plugins/vim-misc
     url = git@github.com:xolox/vim-misc.git
-[submodule ".vim_runtime/sources_non_forked/YouCompleteMe"]
-	path = .vim_runtime/sources_non_forked/YouCompleteMe
+[submodule ".vim_runtime/plugins/vim-multiple-cursors"]
+    path = .vim_runtime/plugins/vim-multiple-cursors
+    url = git@github.com:terryma/vim-multiple-cursors.git
+[submodule ".vim_runtime/plugins/YouCompleteMe"]
+    path = .vim_runtime/plugins/YouCompleteMe
     url = git@github.com:Valloric/YouCompleteMe.git
