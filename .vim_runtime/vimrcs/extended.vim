@@ -198,6 +198,17 @@ func! ResetGoPath()
     let $GOPATH="$HOME/workspace/go"
 endfunc
 
+nmap <F11> :U<Enter>
+command! Dai w|!rsync -rq $HOME/workspace/shell/dai/modules dai:/root/dai && ssh root@dai "screen -S dai -X stuff 'source <(curl -s 192.168.0.5:7999/dai_base.sh) 2>&1 | tee dai.log'$(echo -ne '\015')"
+
+" Edit a file in current path
+if has("unix")
+    map <leader>e  :e <C-R>=expand("%:p:h")<Enter>/
+else
+    "" windows only \\ hackslash lol
+    map <leader>e  :e <C-R>=expand("%:p:h")<Enter>\
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Disable arrow keys
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -207,3 +218,20 @@ for prefix in ['i', 'n', 'v']
     exe prefix . "noremap " . key . " <Nop>"
   endfor
 endfor
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => VIM sessions
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+func! LoadSession(session)
+    let s=$HOME . "/.vim_runtime/.sessions/" . a:session
+    execute 'source '.fnameescape(s)
+endfunc
+
+func! SaveSession(session)
+    let s=$HOME . "/.vim_runtime/.sessions/" . a:session
+    execute 'mksession!'.fnameescape(s)
+endfunc
+
+command! -nargs=1 LS exec LoadSession(<q-args>)
+command! -nargs=1 SS exec SaveSession(<q-args>)

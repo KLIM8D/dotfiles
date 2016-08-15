@@ -190,10 +190,6 @@ map <F3> :next<CR>
 nmap <C-d> :q!<CR>
 " map CTRL + d to quit (INSERT MODE)
 imap <C-d> <ESC><C-d>
-" map CTRL + s to save
-nmap <C-s> :w<CR>
-" map CTRL + s to save (INSERT MODE)
-imap <C-s> <ESC><C-s>i
 " map CTRL + t new tab
 map <C-t> :tabnew<CR>
 " map CTRL + n new vertical
