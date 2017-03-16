@@ -1,8 +1,9 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sections:
 "    -> Python
-"    -> JavaScript
 "    -> Assembly
+"    -> Go
+"    -> Misc
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -26,33 +27,19 @@ au FileType python map <buffer> <leader>2 /def
 au FileType python map <buffer> <leader>C ?class 
 au FileType python map <buffer> <leader>D ?def 
 
-
-""""""""""""""""""""""""""""""""
-" => JavaScript section
-""""""""""""""""""""""""""""""""
-"au FileType javascript call JavaScriptFold()
-"au FileType javascript setl fen
-"au FileType javascript setl nocindent
-"
-"au FileType javascript imap <c-t> AJS.log();<esc>hi
-"au FileType javascript imap <c-a> alert();<esc>hi
-"
-"au FileType javascript inoremap <buffer> $r return 
-"au FileType javascript inoremap <buffer> $f //--- PH ----------------------------------------------<esc>FP2xi
-"
-"function! JavaScriptFold() 
-"    setl foldmethod=syntax
-"    setl foldlevelstart=1
-"    syn region foldBraces start=/{/ end=/}/ transparent fold keepend extend
-"
-"    function! FoldText()
-"        return substitute(getline(v:foldstart), '{.*', '{...}', '')
-"    endfunction
-"    setl foldtext=FoldText()
-"endfunction
-
 """"""""""""""""""""""""""""""""
 " => Assembly
 """"""""""""""""""""""""""""""""
 au BufRead,BufNewFile *.s   let asmsyntax='gas'|let filetype_inc='gas'
 au BufRead,BufNewFile *.asm let asmsyntax='armasm'|let filetype_inc='armasm'
+
+""""""""""""""""""""""""""""""""
+" => Go 
+""""""""""""""""""""""""""""""""
+autocmd BufWritePost *.go GoBuild
+
+""""""""""""""""""""""""""""""""
+" => Misc 
+""""""""""""""""""""""""""""""""
+"quickfix window height is automatically adjusted to fit its contents (maximum 10 lines). 
+aut FileType qf call AdjustWindowHeight(3, 10)

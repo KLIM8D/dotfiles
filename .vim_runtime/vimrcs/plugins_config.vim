@@ -2,9 +2,7 @@
 " Sections:
 "    -> General
 "    -> Pathogen
-"    -> Unite
-"    -> VIM grep
-"    -> Sorround
+"    -> Gruvbox
 "    -> Ctags & Tagbar
 "    -> Upload section to Uplio
 "    -> UltiSnips
@@ -25,24 +23,14 @@
 call pathogen#infect('~/.vim_runtime/plugins')
 call pathogen#helptags()
 
-""""""""""""""""""""""""""""""
-" => Unite 
-""""""""""""""""""""""""""""""
-map <c-b> :Unite buffer<CR>
-map <c-f> :Unite -start-insert file<CR>
 
 """"""""""""""""""""""""""""""
-" => Vim grep
+" => Gruvbox
 """"""""""""""""""""""""""""""
-let Grep_Skip_Dirs = 'RCS CVS SCCS .svn generated'
-set grepprg=/bin/grep\ -nH
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => surround.vim config
-" Annotate strings with gettext 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-vmap Si S(i_<esc>f)
-au FileType mako vmap Si S"i${ _(<esc>2f"a) }<esc>
+colorscheme gruvbox
+""let g:gruvbox_termcolors=16 " for very shitty display / screen / term
+let g:gruvbox_contrast_dark="dark"
+"let g:gruvbox_contrast_light="hard"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Ctags & Tagbar
@@ -84,23 +72,25 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Syntastic
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_exec = 'flake8-python2'
-let g:syntastic_check_on_wq = 0
-let g:syntastic_loc_list_height = 5
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_go_checkers = ['gobuild', 'govet', 'errcheck']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
-let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
-
-let g:ycm_server_keep_logfiles = 1
-let g:ycm_server_log_level = 'debug'
-let g:ycm_server_use_vim_stdout = 0
-let g:ycm_path_to_python_interpreter = '/usr/bin/python'
-
-
-autocmd BufWritePost *.go GoBuild
+"let g:syntastic_check_on_wq = 0
+"let g:syntastic_loc_list_height = 5
+"let g:syntastic_aggregate_errors = 1
+"let g:syntastic_auto_loc_list = 0
+"let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+"let g:syntastic_disabled_filetypes=['html']
+"let g:syntastic_enable_signs=1
+"
+"let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
+"let g:syntastic_go_checkers = ['gobuild', 'govet', 'errcheck']
+"let g:syntastic_python_checkers = ['flake8']
+"let g:syntastic_python_flake8_exec = 'flake8-python2'
+"
+" Write this in your vimrc file
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 0
+" You can disable this option too
+" if you don't want linters to run on opening a file
+"let g:ale_lint_on_enter = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Neocomplete
@@ -132,7 +122,6 @@ function! s:my_cr_function()
 endfunction
 imap <expr><silent> <CR> <SID>my_cr_function()
 imap <C-X><CR> <CR><Plug>AlwaysEnd
-"inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
 
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
@@ -141,27 +130,6 @@ inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><C-y>  neocomplete#close_popup()
 inoremap <expr><C-e>  neocomplete#cancel_popup()
-" Close popup by <Space>.
-"inoremap <expr><Space> pumvisible() ? neocomplete#close_popup() : "\<Space>"
-
-" For cursor moving in insert mode(Not recommended)
-"inoremap <expr><Left>  neocomplete#close_popup() . "\<Left>"
-"inoremap <expr><Right> neocomplete#close_popup() . "\<Right>"
-"inoremap <expr><Up>    neocomplete#close_popup() . "\<Up>"
-"inoremap <expr><Down>  neocomplete#close_popup() . "\<Down>"
-" Or set this.
-"let g:neocomplete#enable_cursor_hold_i = 1
-" Or set this.
-"let g:neocomplete#enable_insert_char_pre = 1
-
-" AutoComplPop like behavior.
-"let g:neocomplete#enable_auto_select = 1
-
-" Shell like behavior(not recommended).
-"set completeopt+=longest
-"let g:neocomplete#enable_auto_select = 1
-"let g:neocomplete#disable_auto_complete = 1
-"inoremap <expr><TAB>  pumvisible() ? "\<Down>" : "\<C-x>\<C-u>"
 
 " Enable heavy omni completion.
 if !exists('g:neocomplete#sources#omni#input_patterns')
@@ -233,6 +201,12 @@ set cmdheight=2
 
 " Run code actions with text selected in visual mode to extract method
 vnoremap <leader><space> :call OmniSharp#GetCodeActions('visual')<cr>
+
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Airline
