@@ -2,6 +2,7 @@
 " Sections:
 "    -> General
 "    -> Pathogen
+"    -> Vim-plug
 "    -> Gruvbox
 "    -> Ctags & Tagbar
 "    -> Upload section to Uplio
@@ -20,9 +21,54 @@
 """"""""""""""""""""""""""""""
 " => Load pathogen paths
 """"""""""""""""""""""""""""""
-call pathogen#infect('~/.vim_runtime/plugins')
-call pathogen#helptags()
+"call pathogen#infect('~/.vim_runtime/plugins')
+"call pathogen#helptags()
 
+""""""""""""""""""""""""""""""
+" => Vim-plug
+""""""""""""""""""""""""""""""
+" Bootstrap vim-plug automatically
+if empty(glob('~/.vim/autoload/plug.vim'))
+    if !isdirectory(glob('~/.vim/autoload'))
+        call mkdir(glob('~').'/.vim/autoload', 'p')
+    endif
+
+    execute '!curl -fLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+endif
+call plug#begin()
+
+Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+Plug 'wincent/command-t'
+Plug 'majutsushi/tagbar'
+Plug 'vim-scripts/tlib'
+Plug 'int3/vim-extradite'
+Plug 'airblade/vim-gitgutter'
+Plug 'w0rp/ale'
+Plug 'shougo/neocomplete.vim'
+Plug 'shougo/echodoc.vim'
+Plug 'dezza/uplio.vim', { 'on': ['<Plug>Uplio_File', '<Plug>Uplio_Visual'] }
+"Plug 'MattesGroeger/vim-bookmarks'
+
+Plug 'phildawes/racer', { 'for': 'rust' }
+Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+Plug 'nvie/vim-flake8', { 'for': 'python' }
+Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'dgryski/vim-godef', { 'for': 'go' }
+Plug 'pangloss/vim-javascript', {'for': 'javascript' }
+Plug 'leafgarland/typescript-vim', {'for': 'typescript'}
+
+call plug#end()
+
+if !empty('g:plugs')
+    " :slow EXTREMELY slow globpath
+    let s:plugged_dir = globpath('~/.vim/plugged','**')
+    if s:plugged_dir ==# ''
+      :PlugInstall
+    endif
+endif
 
 """"""""""""""""""""""""""""""
 " => Gruvbox
@@ -154,7 +200,7 @@ set noshowmatch
 
 "don't autoselect first item in omnicomplete, show if only one item (for preview)
 "remove preview if you don't want to see any documentation whatsoever.
-set completeopt=longest,menuone,preview
+set completeopt=longest,menuone ",preview
 
 "Move the preview window (code documentation) to the bottom of the screen, so it doesn't move the code!
 "You might also want to look at the echodoc plugin
