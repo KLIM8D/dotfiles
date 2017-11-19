@@ -41,7 +41,10 @@ Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'wincent/command-t'
+"Plug 'wincent/command-t'
+Plug 'wincent/command-t', {
+\   'do': 'cd ruby/command-t/ext/command-t && ruby extconf.rb && make'
+\ }
 Plug 'majutsushi/tagbar'
 Plug 'vim-scripts/tlib'
 Plug 'int3/vim-extradite'
@@ -52,13 +55,16 @@ Plug 'shougo/echodoc.vim'
 Plug 'dezza/uplio.vim', { 'on': ['<Plug>Uplio_File', '<Plug>Uplio_Visual'] }
 "Plug 'MattesGroeger/vim-bookmarks'
 
+Plug 'sheerun/vim-polyglot'
 Plug 'phildawes/racer', { 'for': 'rust' }
-Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+"Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'nvie/vim-flake8', { 'for': 'python' }
 Plug 'fatih/vim-go', { 'for': 'go' }
 Plug 'dgryski/vim-godef', { 'for': 'go' }
 Plug 'pangloss/vim-javascript', {'for': 'javascript' }
-Plug 'leafgarland/typescript-vim', {'for': 'typescript'}
+Plug 'OmniSharp/omnisharp-vim'
+"Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+"Plug 'leafgarland/typescript-vim', {'for': 'typescript'}
 
 call plug#end()
 
@@ -214,7 +220,7 @@ augroup omnisharp_commands
     autocmd FileType cs setlocal omnifunc=OmniSharp#Complete
 
     " automatic syntax check on events (TextChanged requires Vim 7.4)
-    autocmd BufEnter,TextChanged,InsertLeave *.cs SyntasticCheck
+    " autocmd BufEnter,TextChanged,InsertLeave *.cs SyntasticCheck
 
     " Automatically add new cs files to the nearest project on save
     autocmd BufWritePost *.cs call OmniSharp#AddToProject()
@@ -311,3 +317,67 @@ let g:go_def_mapping_enabled = 0
 " => command-t
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:CommandTWildIgnore=&wildignore . ",*/*vendor"
+
+" STUFF
+if has('terminal')
+  " FIXME: hangs sometimes until you press a key
+  " buffer_name is "exec"
+  " buftype is "terminal";
+
+  " :help close_cb
+  function! TermCloseHandler(channel)
+    if exists('g:term')
+      unlet g:term
+    endif
+  endfunction
+
+  " :help exit_cb
+  function! TermExitHandler(channel, msg)
+    if exists('g:term')
+      unlet g:term
+    endif
+    close
+  endfunction
+
+  function! TermExec(cmd, ...)
+    let l:term = get(g:, 'term', '')
+    let l:clear = ''
+    
+    " write if wanted
+    if exists('g:term_exec_write') && g:term_exec_write == 1
+      echo "reached write"
+      echom "reached write"
+      execute 'write'
+    endif
+
+    if !exists('g:term')
+      " :help term_start
+      " :help job-options
+      " :help job-callback
+
+      " Handle cd to working directory 'cd $dir && $SHELL'
+      let l:shell_cmd = exists('a:2') ? a:2 : $SHELL
+      let l:shell_cmd = l:shell_cmd.' -c '
+            \ .'cd '.expand('%:p:h')." "
+            \ ."&& ".l:shell_cmd
+
+      let g:term=term_start(exists('a:2') ? a:2 : $SHELL, {
+            \ 'term_name': 'exec', 
+            \ 'exit_cb': 'TermExitHandler',
+            \ 'term_rows': '20',
+            \ 'close_cb': 'TermCloseHandler',
+            \ })
+
+      " Return to original window if arg2 is 1
+      if exists('a:1') == 1
+        execute "normal! \<C-W>p'"
+      endif
+    endif
+
+    "saved if a timeout is needed later
+    "call term_wait(g:term, 100)
+    call term_wait(g:term)
+    " FIXME: eof_chars does not always contain CR tho' its stated in docs
+    call term_sendkeys(g:term, a:cmd."\<CR>")
+  endfunction
+endif

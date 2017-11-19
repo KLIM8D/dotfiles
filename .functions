@@ -23,7 +23,7 @@ function uplio_file() {
 }
 
 function wabio() {
-/bin/curl -s -F url=$("/bin/xclip" -o) -F key=$WABIO_KEY https://wab.io | tr -d '\n' | clipboard_insert 
+/bin/curl -s -F url=$("/bin/xclip" -o) -F key=$WABIO_KEY https://127.0.0.1:8000 | tr -d '\n' | clipboard_insert 
 }
 
 # Count the lines in a filetype 
@@ -57,4 +57,12 @@ fi
 
 function mountiso() {
 sudo mount -o loop $1 /media/iso
+}
+
+function doc() {
+    if [ ! -z $2 ]; then
+        /usr/bin/godoc "$1" "$2" | pygmentize -s -l go
+    else 
+        /usr/bin/godoc "$1" | pygmentize -s -l go
+    fi
 }

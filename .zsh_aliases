@@ -6,14 +6,20 @@ export EDITOR='gvim'
 export BROWSER='/bin/firefox'
 export GOPATH=$HOME/workspace/go
 export GO15VENDOREXPERIMENT=1
-export PATH=$PATH:/home/klim/Scripts:$GOPATH/bin
+export GEM_PATH=$(ruby -e 'print Gem.user_dir')/bin
+export PATH=$PATH:/home/klim/Scripts:$GOPATH/bin:$GEM_PATH
 export PYTHONPATH=/usr/lib/python3.4/site-packages
 export RUST_SRC_PATH=/home/klim/.src/rust/src
 ## Aliases ##
-alias ls='ls --color=auto --group-directories-first'
+alias ls='ls --color=always --group-directories-first'
+alias l='ls -lah'
+alias la='ls -A'
+alias ll='ls -lh'
+alias lr='la -R | grep'
+alias lsa='ls -lah'
 alias pacman='sudo pacman'
 alias cdd='cd /home/klim/Downloads/'
-alias grep='grep --color=auto'
+alias grep='grep --color=never'
 alias load-aliases='source ~/.aliases'
 alias sizeof='du -sh'
 alias feral='ssh mikk@pallas.feralhosting.com'
@@ -44,6 +50,8 @@ alias rec="asciinema rec"
 alias nethome="sudo netctl start wired-home && sudo vpn start Sweden"
 alias ranger="exec urxvt -fn 'xft:Liberation Mono for Powerline:pixelsize=12' -e tmux -2 -c ranger"
 #alias for the fuck
-eval "$(thefuck --alias)"
-alias irc="mosh irc@192.168.1.2 --ssh=\"/bin/ssh -p 9001 -i ~/.ssh/irc\" -- screen -c /home/irc/.screen.rc -D -RR irc -UxaA"
+#eval "$(thefuck --alias)"
+alias irc="mosh irc@honeypot.klim.im --ssh=\"/bin/ssh -p 9001 -i ~/.ssh/irc\" -- screen -c /home/irc/.screen.rc -D -RR irc -UxaA"
 alias godebug="dlv"
+alias quake_res="xrandr --output HDMI2 --primary --mode 800x600 --pos 1080x440 --rotate normal --output HDMI1 --mode 1920x1080 --pos 0x0 --rotate left --output DP1 --off --output eDP1 --off --output VIRTUAL1 --off"
+alias steam-wine='WINEDEBUG=-all quake_res && wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/Steam.exe >/dev/null 2>&1 &'

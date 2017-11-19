@@ -17,6 +17,28 @@ URxvt*tint:		white
 !URxvt.font: xft:Droid Sans Mono for Powerline:pixelsize=22
 URxvt.buffered: true
 
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+!
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+!
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+!
+
+URxvt.letterSpace: -1
+
+! makes it possible to change font size with keybindings
+URxvt.resize-font.smaller: C-Down
+URxvt.resize-font.bigger: C-Up
+URxvt.iso14755: false
+URxvt.iso14755_52: false
+
+! Some programs like alsamixer and xprop do not perform well 
+! with some graphics drivers and in consequence redraw very slowly.
+URxvt*skipBuiltinGlyphs:    true
+
 ! -- Links -- !
 !URxvt*perl-ext-common: default,matcher
 !URxvt*urlLauncher: /bin/firefox
@@ -32,11 +54,15 @@ URxvt.buffered: true
 !URxvt*urlLauncher: /usr/bin/firefox
 !URxvt*underlineURLs: true
 
-URxvt.perl-ext-common:default,clipboard,matcher,keyboard-select
+URxvt.perl-ext-common:default,clipboard,matcher,keyboard-select,resize-font
 URxvt.keysym.M-u:     perl:url-select:select_next
+URxvt.keysym.M-c:   perl:clipboard:copy
+URxvt.keysym.M-v:   perl:clipboard:paste
+URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
 URxvt.url-launcher:   /usr/bin/firefox
 URxvt.underlineURLs:  True
 URxvt.matcher.button: 1 
+URxvt.clipboard.autocopy: true
 
 ! -- ROFI --!
 rofi.color-enabled: true
@@ -58,6 +84,7 @@ rofi.hmode: true
 rofi.terminal: urxvt
 rofi.ssh-set-title: false
 ! -- Colours -- !
-#include "/home/klim/.colors/custom"
-
+!#include "/home/klim/.colors/custom"
+!#include "/home/klim/.colors/gruvbox"
+#include "/home/klim/.colors/gruvbox-dark"
 !*dpi	168

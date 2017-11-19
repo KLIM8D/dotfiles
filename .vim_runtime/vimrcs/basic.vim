@@ -68,6 +68,9 @@ set so=7
 " Turn on the WiLd menu
 set wildmenu
 
+" netrw (explore) tree style listing
+let g:netrw_liststyle= 1
+
 " Ignore compiled files
 set wildignore=*.o,*~,*.pyc
 if has("win16") || has("win32")

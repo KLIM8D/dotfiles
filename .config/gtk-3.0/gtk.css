@@ -1,0 +1,5 @@
+@define-color BACKGROUND_COLOR #202020;
+
+window#vim-main-window {
+    background-color: @BACKGROUND_COLOR;
+}

@@ -39,6 +39,12 @@ interval=20
 
 [separator]
 
+[eth]
+command=echo -n "<span color=\"#BA2020\">Ξ</span>" $($HOME/.i3/ethprices.py price)
+interval=300
+
+[separator]
+
 [bitcoin]
 command=echo -n "<span color=\"#BA2020\"></span>" $($HOME/.i3/btcprices.py price)
 interval=300
