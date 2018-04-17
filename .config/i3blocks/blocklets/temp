@@ -1,4 +1,4 @@
-TEMP=$(sensors | awk '/Physical id 0:/ {print $4}' | sed "s/+//g")
+TEMP=$(sensors | awk '/Package id 0:/ {print $4}' | sed "s/+//g")
 		if [[ $(echo $TEMP | sed "s/\..*//") -gt 63 ]]; then
 			echo -n "<span color='#BA2020'></span> ${TEMP}"
 		else 

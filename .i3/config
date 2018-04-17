@@ -34,7 +34,8 @@ floating_modifier $mod
 ###__HOTKEYS__##
 # start a terminal
 #bindsym $mod+Shift+Return exec i3-sensible-terminal -fn 'xft:Liberation Mono for Powerline:pixelsize=22' -e tmux -2
-bindsym $mod+Shift+Return exec /usr/bin/i3-sensible-terminal -fn 'xft:Liberation Mono for Powerline:pixelsize=12' -lsp 1 -e tmux -2
+#bindsym $mod+Shift+Return exec /usr/bin/i3-sensible-terminal -fn 'xft:Liberation Mono for Powerline:pixelsize=12' -lsp 1 -e tmux -2
+bindsym $mod+Shift+Return exec /usr/bin/st -- tmux -2
 
 # kill focused window
 bindsym $mod+q kill
@@ -97,6 +98,9 @@ bindsym $mod+Shift+space floating toggle
 
 # focus the parent container
 bindsym Mod1+Tab focus down
+
+# reconfigure monitors
+bindsym $mod+F7 /usr/bin/autorandr --change
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -331,11 +335,7 @@ bindsym XF86AudioRewind exec mpc random
 exec --no-startup-id eval $($HOME/Scripts/wallpaper)
 exec --no-startup-id /usr/bin/compton -bG --config $HOME/.i3/compton.conf
 exec --no-startup-id $HOME/Scripts/low-battery
-exec --no-startup-id /bin/blueman-applet
 exec --no-startup-id /usr/bin/rofi -key-window SuperR+t -key-run SuperR+r
 exec --no-startup-id /usr/bin/redshift-gtk
 exec --no-startup-id /usr/bin/dunst -conf ~/.i3/dunstrc
-exec --no-startup-id $HOME/.startup
-#exec --no-startup-id /usr/bin/connman-ui-gtk
-#exec --no-startup-id $HOME/.fehbg
-#exec --no-startup-id i3-msg 'workspace Mail; exec urxvt -name Mail -e /usr/bin/mutt'
+exec --no-startup-id /usr/bin/autorandr --change

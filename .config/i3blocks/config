@@ -93,9 +93,9 @@ interval=30
 # OpenVPN support
 #
 # Support multiple VPN, with colors.
-[openvpn]
-interval=once
-signal=20
+#[openvpn]
+#interval=once
+#signal=20
 
 [separator]
 

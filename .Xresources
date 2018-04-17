@@ -3,7 +3,7 @@ Xft.rgba: rgb
 Xft.hinting: true
 Xft.hintstyle: hintfull
 !Xcursor.theme: neutral
-!Xcursor.size: 48
+Xcursor.size: 24
 ! URxvt
 URxvt*termName: rxvt
 URxvt*scrollBar_right:	false
@@ -59,7 +59,7 @@ URxvt.keysym.M-u:     perl:url-select:select_next
 URxvt.keysym.M-c:   perl:clipboard:copy
 URxvt.keysym.M-v:   perl:clipboard:paste
 URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
-URxvt.url-launcher:   /usr/bin/firefox
+URxvt.url-launcher:   /usr/bin/firefox-nightly
 URxvt.underlineURLs:  True
 URxvt.matcher.button: 1 
 URxvt.clipboard.autocopy: true

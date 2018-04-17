@@ -60,9 +60,10 @@ Plug 'phildawes/racer', { 'for': 'rust' }
 "Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'nvie/vim-flake8', { 'for': 'python' }
 Plug 'fatih/vim-go', { 'for': 'go' }
-Plug 'dgryski/vim-godef', { 'for': 'go' }
+"Plug 'dgryski/vim-godef', { 'for': 'go' }
 Plug 'pangloss/vim-javascript', {'for': 'javascript' }
 Plug 'OmniSharp/omnisharp-vim'
+Plug 'tpope/vim-fugitive'
 "Plug 'nsf/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 "Plug 'leafgarland/typescript-vim', {'for': 'typescript'}
 
@@ -312,6 +313,7 @@ nmap <leader>d :Extradite!<cr>
 " => vim-go
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:go_def_mapping_enabled = 0
+nmap gd :GoDef<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => command-t

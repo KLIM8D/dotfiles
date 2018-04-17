@@ -6,7 +6,7 @@ export EDITOR='gvim'
 export BROWSER='/bin/firefox'
 export GOPATH=$HOME/workspace/go
 export GO15VENDOREXPERIMENT=1
-export GEM_PATH=$(ruby -e 'print Gem.user_dir')/bin
+#export GEM_PATH=$(ruby -e 'print Gem.user_dir')/bin
 export PATH=$PATH:/home/klim/Scripts:$GOPATH/bin:$GEM_PATH
 export PYTHONPATH=/usr/lib/python3.4/site-packages
 export RUST_SRC_PATH=/home/klim/.src/rust/src
@@ -17,6 +17,7 @@ alias la='ls -A'
 alias ll='ls -lh'
 alias lr='la -R | grep'
 alias lsa='ls -lah'
+alias rm='rm -i'
 alias pacman='sudo pacman'
 alias cdd='cd /home/klim/Downloads/'
 alias grep='grep --color=never'
@@ -55,3 +56,5 @@ alias irc="mosh irc@honeypot.klim.im --ssh=\"/bin/ssh -p 9001 -i ~/.ssh/irc\" --
 alias godebug="dlv"
 alias quake_res="xrandr --output HDMI2 --primary --mode 800x600 --pos 1080x440 --rotate normal --output HDMI1 --mode 1920x1080 --pos 0x0 --rotate left --output DP1 --off --output eDP1 --off --output VIRTUAL1 --off"
 alias steam-wine='WINEDEBUG=-all quake_res && wine ~/.wine/drive_c/Program\ Files\ \(x86\)/Steam/Steam.exe >/dev/null 2>&1 &'
+alias mdv="mdv -t 649.7192"
+alias prettygo="pygmentize -s -l go"
